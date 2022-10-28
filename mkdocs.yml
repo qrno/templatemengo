@@ -7,9 +7,8 @@ theme:
     accent: yellow
   features:
     - content.code.annotate 
-
-
   logo: assets/flamengo.png
+  favicon: assets/flamengo.png
 
 markdown_extensions:
   - pymdownx.highlight:

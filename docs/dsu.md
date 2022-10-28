@@ -1,7 +1,9 @@
 # Disjoint Set Union
 
+## Implementation 
+
 !!! warning
-    The implementation uses indexes 0...n
+    The implementation uses indexes $$0 ≤ i < n-1$$
 
 ```cpp title="DSU"
 struct DSU {
@@ -21,6 +23,8 @@ struct DSU {
 };
 ```
 
+This implementation can be tested on [Library Checker - Unionfind](https://judge.yosupo.jp/problem/unionfind). [[Submission]](https://judge.yosupo.jp/submission/110413)
+
 ## Problems
 
-- [Some problem](google.com) uses a vector of DSUs for...
+- [Codeforces 25D - Roads Not Only in Berland](https://codeforces.com/contest/25/problem/D)
