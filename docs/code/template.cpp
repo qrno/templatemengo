@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Template (v1.3.0 - 2023-01-11) (codeforces:cebolinha, atcoder:edu) {{{
+// Template (v1.3.1 - 2023-01-11) (codeforces:cebolinha, atcoder:edu) {{{
 
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -11,14 +11,14 @@ template<class T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag,tr
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 
+#define int long long
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr)
+
 template<class T> using V = vector<T>;
 template<class T> using min_priority_queue = priority_queue<T, vector<T>, greater<T>>;
 using ii = pair<int, int>;
 using iii = tuple<int, int, int>;
 using ll = long long;
-
-#define int long long
-#define fastio ios::sync_with_stdio(false); cin.tie(nullptr)
 
 #define all(c) c.begin(), c.end()
 #define rall(c) c.rbegin(), c.rend()
