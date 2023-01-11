@@ -3,7 +3,7 @@
 ## Implementation 
 
 !!! warning
-    The implementation uses indexes $$0 ≤ i < n-1$$
+    The implementation uses indices [0, n-1]
 
 ```cpp title="DSU"
 struct DSU {
