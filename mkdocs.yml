@@ -16,7 +16,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       check_paths: true
-      base_path: ['docs/code']
+      base_path: ['code']
   - admonition
   - pymdownx.details
   - pymdownx.superfences
