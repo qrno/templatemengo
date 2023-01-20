@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Template (v1.3.2 - 2023-01-11) (codeforces:cebolinha, atcoder:edu) {{{
+// Template (v1.3.2 - 2023-01-20) (codeforces:cebolinha, atcoder:edu) {{{
 
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -38,8 +38,8 @@ using ll = long long;
 template<class T, class U> inline void miq(T& a, U b){if (a > b) a = b;}
 template<class T, class U> inline void maq(T& a, U b){if (a < b) a = b;}
 
-template<class T> istream &operator>>(istream &is, vector<T> &v) { for (auto &a : v) is >> a; return is; }
 template<class T, class U> istream &operator>>(istream &is, pair<T, U> &p) { is >> p.ff >> p.ss; return is; }
+template<class T> istream &operator>>(istream &is, vector<T> &v) { for (auto &a : v) is >> a; return is; }
 template<class T, class U> ostream &operator<<(ostream &os, pair<T, U> const& p) { os << "(" << p.first << " " << p.second << ")"; return os; }
 template<class T> ostream &operator<<(ostream &os, vector<T> const& v) { for (int i = 0; i < v.size(); i++) os << cond(i," ","") << v[i]; return os; }
 template<class T, class U> ostream &operator<<(ostream &os, map<T, U> const& m) { bool first = true; for (auto const& [k, v] : m) { if (!first) os << " "; first = false; os << "{" << k << " : " << v << "}"; } return os; }
