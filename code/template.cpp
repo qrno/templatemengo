@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Template (v1.3.2 - 2023-01-20) (codeforces:cebolinha, atcoder:edu) {{{
+// Template (v1.3.3 - 2023-02-05) (codeforces:cebolinha, atcoder:edu) {{{
 
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -22,9 +22,9 @@ using ll = long long;
 
 #define all(c) c.begin(), c.end()
 #define rall(c) c.rbegin(), c.rend()
+#define sz(x) (int) (x).size()
 #define pb push_back
 #define eb emplace_back
-#define mp make_pair
 #define ff first
 #define ss second
 #define nemo ><>
