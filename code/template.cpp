@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Template (v1.4.0 - 2023-04-19) (codeforces:cebolinha, atcoder:edu) {{{
+// Template (v1.4.1 - 2023-04-19) (codeforces:cebolinha, atcoder:edu) {{{
 
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
@@ -41,8 +41,8 @@ template<class T, class U> auto &operator>>(istream &is, pair<T, U> &p) { return
 template<class T, class U> auto &operator<<(ostream &os, pair<T, U> const& p) { return os << '(' << p.first << ' ' << p.second << ')'; }
 
 const auto EMPTY_STRING = "", SEPARATOR = " ";
-template<class C, typename T = typename C::value_type> auto &operator>>(istream &is, C &c) { for (auto &x : c) is >> x; return is; }
-template<class C, typename T = typename C::value_type> auto &operator<<(ostream& os, C const &c) { auto sep = EMPTY_STRING; for (auto x : c) os << sep << x, sep = SEPARATOR; return os; }
+template<class T> auto &operator>>(istream &is, vector<T> &c) { for (auto &x : c) is >> x; return is; }
+template<class C, typename T = typename C::value_type, typename = enable_if<!is_same<C, string>::value>> auto &operator<<(ostream& os, C const &c) { auto sep = EMPTY_STRING; for (auto x : c) os << sep << x, sep = SEPARATOR; return os; }
 
 template<class... A> void in(A &...a) { ((cin >> a), ...); }
 template<class... A> void out(A const&... a) { auto sep = EMPTY_STRING; ((cout << sep << a, sep = SEPARATOR), ...); cout << '\n'; }
