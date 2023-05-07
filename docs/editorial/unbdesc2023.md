@@ -14,7 +14,7 @@ Quando pegamos um prefixo de $\mathcal{F}$, vamos pegar várias strings completa
 
 A função `word_prefix` tem dois casos base. Se o prefixo que queremos tem tamanho $0$, as quantidades são $0$. Além disso, criamos casos especiais para a primeira e a segunda palavra.
 
-O principal fato que deve ser notado é que como $F_k = F_{k-1} \oplus F_{k-2}$, se temos um prefixo de $F_k$ que é menor ou igual à $F_{k-1}$, ele é equivalente à um prefixo do mesmo tamanho de $F_{k-1}$. Senão, ela é $F_{k-1}$ por completo, mais um prefixo de $F_{k-2}$. Assim, podemos definir `word_prefix` recursivamente de uma forma simples.
+O principal fato que deve ser notado é que como $F_k = F_{k-1} \oplus F_{k-2}$, se temos um prefixo de $F_k$ que é menor ou igual à $F_{k-1}$, ele é equivalente à um prefixo do mesmo tamanho de $F_{k-1}$. Senão, ele é $F_{k-1}$ por completo, mais um prefixo de $F_{k-2}$. Assim, podemos definir `word_prefix` recursivamente de uma forma simples.
 
 ```cpp
 #include <bits/stdc++.h>
