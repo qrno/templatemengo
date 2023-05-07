@@ -16,7 +16,7 @@ A função `word_prefix` tem dois casos base. Se o prefixo que queremos tem tama
 
 O principal fato que deve ser notado é que como $F_k = F_{k-1} \oplus F_{k-2}$, se temos um prefixo de $F_k$ que é menor ou igual à $F_{k-1}$, ele é equivalente à um prefixo do mesmo tamanho de $F_{k-1}$. Senão, ele é $F_{k-1}$ por completo, mais um prefixo de $F_{k-2}$. Assim, podemos definir `word_prefix` recursivamente de uma forma simples.
 
-Complexidade: $O(\log_\varphi R)$? É tão rápido que nem importa
+Complexidade: $\mathcal{O}(\log_\varphi R)$? É tão rápido que nem importa
 
 ```cpp
 #include <bits/stdc++.h>
@@ -93,7 +93,7 @@ pois a vida que sobra é menor que o dano de um ciclo de ataques.
 Assim o loop que vai aplicando o dano de cada ataque enquanto o monstro estiver vivo não vai rodar mais
 do que $N$ vezes, sendo rápido o suficiente.
 
-Complexidade: $O(N)$
+Complexidade: $\mathcal{O}(N)$
 
 ```cpp
 #include <bits/stdc++.h>
@@ -121,5 +121,65 @@ int main() {
   }
 
   cout << ans << endl;
+}
+```
+
+## Keyboard
+
+O enunciado não garante que não vão ter dois números iguais seguidos na sequência de digitação. O jeito mais fácil de lidar com isso é quando for ler a sequência ignorar os números que são iguais ao número anterior.
+
+Depois disso é só fazer uma BFS, onde em vez do estado ser $(i, j)$, ele é $(i, j, \text{done})$, onde $\text{done}$ é a quantidade de itens da sequência que já foram satisfeitos. O código abaixo é bem auto-explicativo.
+
+Complexidade: $\mathcal{O}(N\cdot M\cdot Q)$
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const vector<pair<int, int>> delta{{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+
+int main() {
+  ios::sync_with_stdio(false); cin.tie(nullptr);
+
+  int n, m;
+  cin >> n >> m;
+
+  vector grid(n, vector<int>(m));
+  for (int i = 0; i < n; i++)
+    for (int j = 0; j < m; j++)
+      cin >> grid[i][j];
+
+  int q; cin >> q;
+  vector<int> path;
+  for (int i = 0; i < q; i++) {
+    int x; cin >> x;
+    if (path.empty() || path.back() != x)
+      path.push_back(x);
+  }
+  q = size(path);
+
+  vector dist(n, vector(m, vector<int>(q+1, -1)));
+
+  queue<array<int, 4>> Q;
+
+  int first_done = path[0] == grid[0][0];
+  Q.push({0, 0, 0, first_done});
+
+  while (!Q.empty()) {
+    auto [vd, vi, vj, vdone] = Q.front(); Q.pop();
+    if (vdone == q) return cout << vd << endl, 0;
+
+    for (auto [di, dj] : delta) {
+      int ui = vi + di, uj = vj + dj;
+      if (!(0 <= ui && ui < n)) continue;
+      if (!(0 <= uj && uj < m)) continue;
+
+      int udone = vdone + (grid[ui][uj] == path[vdone]);
+      if (dist[ui][uj][udone] == -1) {
+        dist[ui][uj][udone] = vd + 1;
+        Q.push({vd+1, ui, uj, udone});
+      }
+    }
+  }
 }
 ```
