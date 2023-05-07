@@ -10,7 +10,7 @@ Também guardaremos o tamanho de cada uma dessas palavras em `LEN`.
 Queremos saber as quantidades de $a$ e $b$ em $\mathcal{F}[L, R]$.
 Podemos fazer isso conseguindo essas quantidades em $\mathcal{F}[0,R]$ e removendo as quantidades em $\mathcal{F}[0,L-1]$.
 
-Quando pegamos um prefixo de $\mathcal{F}$, vamos pegar várias strings completas, mais um prefixo de uma string $F_{idx}$. Fazemos isso na função `ab_count`, que adiciona as letras de palavras completas enquanto o total não ultrapassa a quantidade de letras que queremos. No fim, ela chama a função `word_prefix` que acha a quantidade de cada letra num prefixo dessa palavra incompleta.
+Quando pegamos um prefixo de $\mathcal{F}$, vamos pegar várias strings completas, mais um prefixo de uma palavra que ficou incompleta. Fazemos isso na função `ab_count`, que adiciona as letras de palavras completas enquanto o total não ultrapassa a quantidade de letras que queremos. No fim, ela chama a função `word_prefix` que acha a quantidade de cada letra num prefixo dessa palavra incompleta.
 
 A função `word_prefix` tem dois casos base. Se o prefixo que queremos tem tamanho $0$, as quantidades são $0$. Além disso, criamos casos especiais para a primeira e a segunda palavra.
 
