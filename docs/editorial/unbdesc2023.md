@@ -81,7 +81,7 @@ A DP é baseada do fato que para obter $A_0 \dots A_i$, devemos primeiro obter
 $A_0 \dots A_{i-1}$ com $A_{i-1} = j \text{ ou } j-1$ e depois adicionar $A_i = j$.
 Devemos somar o custo $1$ para mudar o estado do interruptor caso $A_i \neq j$.
 
-Para $i=0$ temos os casos base: $D_{(0,0)} = 1, D_{(0, 1)} = \infty, D_{(0, 2)} = \infty$.
+Para $i=0$ temos os casos base: $D_{(0,0)} = A_0 \neq 0, D_{(0, 1)} = \infty, D_{(0, 2)} = \infty$.
 
 Para $i>0$, temos:
 

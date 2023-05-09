@@ -497,7 +497,7 @@ Podemos fazer isso conseguindo essas quantidades em <span class="arithmatex">\(\
 A DP é baseada do fato que para obter <span class="arithmatex">\(A_0 \dots A_i\)</span>, devemos primeiro obter
 <span class="arithmatex">\(A_0 \dots A_{i-1}\)</span> com <span class="arithmatex">\(A_{i-1} = j \text{ ou } j-1\)</span> e depois adicionar <span class="arithmatex">\(A_i = j\)</span>.
 Devemos somar o custo <span class="arithmatex">\(1\)</span> para mudar o estado do interruptor caso <span class="arithmatex">\(A_i \neq j\)</span>.</p>
-<p>Para <span class="arithmatex">\(i=0\)</span> temos os casos base: <span class="arithmatex">\(D_{(0,0)} = 1, D_{(0, 1)} = \infty, D_{(0, 2)} = \infty\)</span>.</p>
+<p>Para <span class="arithmatex">\(i=0\)</span> temos os casos base: <span class="arithmatex">\(D_{(0,0)} = A_0 \neq 0, D_{(0, 1)} = \infty, D_{(0, 2)} = \infty\)</span>.</p>
 <p>Para <span class="arithmatex">\(i&gt;0\)</span>, temos:</p>
 <div class="arithmatex">\[
 D_{(i, j)} = min
