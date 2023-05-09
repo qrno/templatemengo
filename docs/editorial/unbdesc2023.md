@@ -72,6 +72,66 @@ signed main() {
 }
 ```
 
+## Interruptores
+
+Para simplificar o código, convertemos os valores do vetor de $(1, 0, -1)$ para $(0, 1, 2)$.
+
+Fazemos uma DP que guarda o menor custo para obter $A_0 \dots A_i$ com $A_i = j$.
+A DP é baseada do fato que para obter $A_0 \dots A_i$, devemos primeiro obter
+$A_0 \dots A_{i-1}$ com $A_{i-1} = j \text{ ou } j-1$ e depois adicionar $A_i = j$.
+Devemos somar o custo $1$ para mudar o estado do interruptor caso $A_i \neq j$.
+
+Para $i=0$ temos os casos base: $D_{(0,0)} = 1, D_{(0, 1)} = \infty, D_{(0, 2)} = \infty$.
+
+Para $i>0$, temos:
+
+$$
+D_{(i, j)} = min
+\begin{cases}
+    D_{(i-1, j)}\\
+    D_{(i-1, j-1)} \text{ para } j > 0
+\end{cases}
++ (A_i \neq j)
+$$
+
+Complexidade: $\mathcal{O}(N)$
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int INF = 0x3f3f3f3f;
+
+int n;
+int A[100'000 + 8];
+int DP[100'000 + 8][3];
+
+int main() {
+  ios::sync_with_stdio(false); cin.tie(nullptr);
+
+  cin >> n;
+  for (int i = 0; i < n; i++) {
+    cin >> A[i];
+    if (A[i] == +1) A[i] = 0;
+    else if (A[i] ==  0) A[i] = 1;
+    else if (A[i] == -1) A[i] = 2;
+  }
+
+  DP[0][0] = (A[0] != 0);
+  DP[0][1] = DP[0][2] = INF;
+  for (int i = 1; i < n; i++) {
+    for (int j = 0; j < 3; j++) {
+      DP[i][j] = DP[i-1][j] + (A[i] != j);
+      if (j-1 >= 0) {
+        DP[i][j] = min(DP[i][j], DP[i-1][j-1] + (A[i] != j));
+      }
+    }
+  }
+
+  cout << DP[n-1][2] << endl;
+}
+```
+
 ## Jovem Aprendiz
 
 Essa foi a questão com mais submissões da prova (151, ou 31.0%).
