@@ -76,7 +76,7 @@ signed main() {
 
 Para simplificar o código, convertemos os valores do vetor de $(1, 0, -1)$ para $(0, 1, 2)$.
 
-Fazemos uma DP que guarda o menor custo para obter $A_0 \dots A_i$ com $A_i = j$.
+Fazemos uma DP que guarda para $(i, j)$ o menor custo para obter $A_0 \dots A_i$ com $A_i = j$.
 A DP é baseada do fato que para obter $A_0 \dots A_i$, devemos primeiro obter
 $A_0 \dots A_{i-1}$ com $A_{i-1} = j \text{ ou } j-1$ e depois adicionar $A_i = j$.
 Devemos somar o custo $1$ para mudar o estado do interruptor caso $A_i \neq j$.

@@ -493,7 +493,7 @@ Podemos fazer isso conseguindo essas quantidades em <span class="arithmatex">\(\
 </code></pre></div>
 <h2 id="interruptores">Interruptores</h2>
 <p>Para simplificar o código, convertemos os valores do vetor de <span class="arithmatex">\((1, 0, -1)\)</span> para <span class="arithmatex">\((0, 1, 2)\)</span>.</p>
-<p>Fazemos uma DP que guarda o menor custo para obter <span class="arithmatex">\(A_0 \dots A_i\)</span> com <span class="arithmatex">\(A_i = j\)</span>.
+<p>Fazemos uma DP que guarda para <span class="arithmatex">\((i, j)\)</span> o menor custo para obter <span class="arithmatex">\(A_0 \dots A_i\)</span> com <span class="arithmatex">\(A_i = j\)</span>.
 A DP é baseada do fato que para obter <span class="arithmatex">\(A_0 \dots A_i\)</span>, devemos primeiro obter
 <span class="arithmatex">\(A_0 \dots A_{i-1}\)</span> com <span class="arithmatex">\(A_{i-1} = j \text{ ou } j-1\)</span> e depois adicionar <span class="arithmatex">\(A_i = j\)</span>.
 Devemos somar o custo <span class="arithmatex">\(1\)</span> para mudar o estado do interruptor caso <span class="arithmatex">\(A_i \neq j\)</span>.</p>
