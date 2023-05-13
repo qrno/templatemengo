@@ -1,6 +1,6 @@
 struct DSU {
   vector<int> p, s;
-  DSU (int n) { p.assign(n, -1), s.assign(n, 1); }
+  DSU (int n) : p(n, -1), s(n, 1) {};
   int find(int v) {
     if (p[v] == -1) return v;
     return p[v] = find(p[v]);
