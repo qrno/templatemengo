@@ -1,58 +1,40 @@
-/* template<typename T> */
-/* class SegmentTree { */
-/*   int n; */
-/*   T neutral; */
-/*   V<T> t; */
-/*   std::function<T(T,T)> merge; */
-/* public: */
-/*   SegmentTree(int n, T neutral, */
-/*               std::function<T(T,T)> merge) { */
-/*     this->n = n; */
-/*     this->neutral = neutral; */
-/*     this->merge = merge; */
-/*     t.assign(2*n, neutral); */
-/*   } */
-/**/
-/*   SegmentTree(V<T> &v, T neutral, */
-/*               std::function<T(T,T)> merge) { */
-/*     this->n = v.size(); */
-/*     this->neutral = neutral; */
-/*     this->merge = merge; */
-/*     t.assign(2*n, neutral); */
-/*     loop (i, n) t[i+n] = v[i]; */
-/*     build(); */
-/*   } */
-/**/
-/*   void build() { */
-/*     for (int i=n-1; i>0; i--) */
-/*       t[i]=merge(t[2*i],t[2*i+1]); */
-/*   } */
-/**/
-/*   T query(int l, int r) { */
-/*     T rl = neutral, rr = neutral; */
-/*     for (l+=n, r+=n+1; l<r; l/=2, r/=2) { */
-/*       if (l&1) rl = merge(rl, t[l++]); */
-/*       if (r&1) rr = merge(t[--r], rr); */
-/*     } */
-/*     return merge(rl, rr); */
-/*   } */
-/**/
-/*   void update(int p, T val) { */
-/*     for (t[p+=n]=val; p > 1; p /= 2) */
-/*       t[p/2] = merge(t[min(p, p^1)], t[max(p, p^1)]); */
-/*   } */
-/* }; */
-/**/
+// Based on celiopassos/competitive-programming
+template <class T>
+struct SegmentTree {
+  int N;
+  vector<T> st;
 
-#include <vector>
+  explicit SegmentTree(int N) : N(N), st(2 * N) {}
 
-using namespace std;
+  template <typename Iterator>
+  SegmentTree(Iterator first, Iterator last) : SegmentTree(last-first) {
+    copy(first, last, st.begin()+N);
+    for (int p = N-1; p > 0; --p) {
+      st[p] = st[p << 1] + st[p << 1 | 1];
+    }
+  }
 
-class SegmentTree {
-  int n;
-  vector<int> T, L;
-public:
-};
+  void modify(int p, T value) {
+    p += N;
+    st[p] = value;
+    while (p > 1) {
+      p >>= 1;
+      st[p] = st[p << 1] + st[p << 1 | 1];
+    }
+  }
 
-struct Data {
+  T query(int l, int r) const {
+    T resl = T(), resr = T();
+    for (l += N, r += N; l < r; l >>= 1, r >>= 1) {
+      if (l & 1) {
+        resl = resl + st[l];
+        ++l;
+      }
+      if (r & 1) {
+        --r;
+        resr = st[r] + resr;
+      }
+    }
+    return resl + resr;
+  }
 };

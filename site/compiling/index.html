@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../flow/">
+        <link rel="prev" href="../checklist/">
       
       
-        <link rel="next" href="../gyms/">
+        <link rel="next" href="../dsu/">
       
       <link rel="icon" href="../assets/flamengo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
-        <title>Geometry - Templatemengo</title>
+        <title>Compiling - Templatemengo</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#geometry" class="md-skip">
+        <a href="#compiling" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Geometry
+              Compiling
             
           </span>
         </div>
@@ -216,11 +216,21 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../compiling/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Compiling
       </a>
+      
     </li>
   
 
@@ -261,52 +271,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Geometry
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
         Geometry
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#relevant-links" class="md-nav__link">
-    Relevant Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -440,21 +409,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#relevant-links" class="md-nav__link">
-    Relevant Links
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -468,11 +422,11 @@
                   
 
 
-<h1 id="geometry">Geometry</h1>
-<h2 id="relevant-links">Relevant Links</h2>
-<ul>
-<li><a href="https://codeforces.com/blog/entry/22175?mobile=false">Easy geometry using std::complex</a></li>
-</ul>
+<h1 id="compiling">Compiling</h1>
+<div class="highlight"><span class="filename">Compiling a.cpp into a</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>g++<span class="w"> </span>-Wall<span class="w"> </span>-Wextra<span class="w"> </span>-Wconversion<span class="w"> </span>-g3<span class="w"> </span>-O3<span class="w"> </span>-fsanitize<span class="o">=</span>address,undefined<span class="w"> </span>a.cpp<span class="w"> </span>-o<span class="w"> </span>a
+</code></pre></div>
+<div class="highlight"><span class="filename">Recording execution with valgrind</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>valgrind<span class="w"> </span>--tool<span class="o">=</span>cachegrind<span class="w"> </span>./a<span class="w"> </span>&lt;<span class="w"> </span>a.txt
+</code></pre></div>
 
 
 

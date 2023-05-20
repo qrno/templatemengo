@@ -1,7 +1,10 @@
 int fexp(int b, int e) {
-  if (e == 0) return 1;
-  int h = fexp(b, e/2);
-  h = (h * h) % MOD;
-  if (e % 2) h = (h * b) % MOD;
-  return h;
+  b %= MOD;
+  int ans = 1;
+  while (e) {
+    if (e & 1) (ans *= b) %= MOD;
+    e >>= 1;
+    (b *= b) %= MOD;
+  }
+  return ans;
 }
