@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../kosaraju/">
+        <link rel="prev" href="../combinatorics/">
       
       
-        <link rel="next" href="../seg/">
+        <link rel="next" href="../z_p/">
       
-      <link rel="icon" href="../assets/flamengo.png">
+      <link rel="icon" href="../../assets/flamengo.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
-        <title>Minimum Window - Templatemengo</title>
+        <title>XOR-Basis - Templatemengo</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#minimum-window" class="md-skip">
+        <a href="#xor-basis" class="md-skip">
           Skip to content
         </a>
       
@@ -83,9 +83,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Templatemengo" class="md-header__button md-logo" aria-label="Templatemengo" data-md-component="logo">
+    <a href="../.." title="Templatemengo" class="md-header__button md-logo" aria-label="Templatemengo" data-md-component="logo">
       
-  <img src="../assets/flamengo.png" alt="logo">
+  <img src="../../assets/flamengo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Minimum Window
+              XOR-Basis
             
           </span>
         </div>
@@ -170,9 +170,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Templatemengo" class="md-nav__button md-logo" aria-label="Templatemengo" data-md-component="logo">
+    <a href="../.." title="Templatemengo" class="md-nav__button md-logo" aria-label="Templatemengo" data-md-component="logo">
       
-  <img src="../assets/flamengo.png" alt="logo">
+  <img src="../../assets/flamengo.png" alt="logo">
 
     </a>
     Templatemengo
@@ -188,7 +188,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Index
       </a>
     </li>
@@ -203,7 +203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dsu/" class="md-nav__link">
+      <a href="../../dsu/" class="md-nav__link">
         Disjoint Set Union
       </a>
     </li>
@@ -218,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flow/" class="md-nav__link">
+      <a href="../../flow/" class="md-nav__link">
         Flow
       </a>
     </li>
@@ -233,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../geometry/" class="md-nav__link">
+      <a href="../../geometry/" class="md-nav__link">
         Geometry
       </a>
     </li>
@@ -248,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kosaraju/" class="md-nav__link">
+      <a href="../../kosaraju/" class="md-nav__link">
         Kosaraju
       </a>
     </li>
@@ -261,59 +261,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Minimum Window
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../min_window/" class="md-nav__link">
         Minimum Window
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#implementation" class="md-nav__link">
-    Implementation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
-    Problems
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -326,7 +278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../seg/" class="md-nav__link">
+      <a href="../../seg/" class="md-nav__link">
         Segment Tree
       </a>
     </li>
@@ -341,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../template/" class="md-nav__link">
+      <a href="../../template/" class="md-nav__link">
         Template
       </a>
     </li>
@@ -383,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../editorial/unbdesc2023/" class="md-nav__link">
+      <a href="../../editorial/unbdesc2023/" class="md-nav__link">
         UnBDESC 2023
       </a>
     </li>
@@ -403,14 +355,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
       
       
       
@@ -419,7 +373,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           Mathematics
@@ -432,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mathematics/bitmasks/" class="md-nav__link">
+      <a href="../bitmasks/" class="md-nav__link">
         Bitmasks
       </a>
     </li>
@@ -446,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mathematics/combinatorics/" class="md-nav__link">
+      <a href="../combinatorics/" class="md-nav__link">
         Combinatorics
       </a>
     </li>
@@ -458,11 +412,59 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../mathematics/xor_basis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          XOR-Basis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         XOR-Basis
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    Implementation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    Explanation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -474,7 +476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mathematics/z_p/" class="md-nav__link">
+      <a href="../z_p/" class="md-nav__link">
         Modular Arithmetic
       </a>
     </li>
@@ -523,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meta/checklist/" class="md-nav__link">
+      <a href="../../meta/checklist/" class="md-nav__link">
         Checklist
       </a>
     </li>
@@ -537,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meta/commands/" class="md-nav__link">
+      <a href="../../meta/commands/" class="md-nav__link">
         Commands
       </a>
     </li>
@@ -551,7 +553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../meta/gyms/" class="md-nav__link">
+      <a href="../../meta/gyms/" class="md-nav__link">
         Gyms
       </a>
     </li>
@@ -599,8 +601,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems" class="md-nav__link">
-    Problems
+  <a href="#explanation" class="md-nav__link">
+    Explanation
   </a>
   
 </li>
@@ -620,32 +622,22 @@
                   
 
 
-<h1 id="minimum-window">Minimum Window</h1>
+<h1 id="xor-basis">XOR-Basis</h1>
 <h2 id="implementation">Implementation</h2>
-<p>Specify a window <code>W</code> and as you push new elements, it will tell you the smallest within <code>W</code> of the last element.</p>
-<div class="highlight"><span class="filename">Minimum Window</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">MinWindow</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">W</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="n">deque</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">Q</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">MinWindow</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">W</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">W</span><span class="p">(</span><span class="n">W</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">push</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">ff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">idx</span><span class="o">-</span><span class="n">W</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">Q</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">Q</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">Q</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">ss</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">Q</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="n">Q</span><span class="p">.</span><span class="n">pb</span><span class="p">({</span><span class="n">idx</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">});</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">get</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">Q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">ss</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">};</span>
+<div class="highlight"><span class="filename">XOR Basis</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Basis</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">B</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="nf">reduce</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">B</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">^</span><span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reduce</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">};</span>
 </code></pre></div>
-<h2 id="problems">Problems</h2>
-<p>A couple problems where this is useful:</p>
-<ul>
-<li><a href="https://codeforces.com/contest/797/problem/F">(CF797-F) Mice and Holes</a></li>
-<li><a href="https://codeforces.com/problemset/problem/372/C">(CF372-C) Watching Fireworks is Fun</a></li>
-<li><a href="https://codeforces.com/contest/1731/problem/D">(CF1731-D) Valiant's New Map</a></li>
-</ul>
+<h2 id="explanation">Explanation</h2>
+<p>On <a href="https://usaco.guide/adv/xor-basis?lang=cpp">USACO Guide</a> you can find a great presentation by Benq, as well as various problems.</p>
 
 
 
@@ -683,12 +675,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c2be25ad.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
