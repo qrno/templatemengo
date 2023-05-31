@@ -18,6 +18,7 @@
 - `#define int long long`
 - Fast IO
 - Be _very_ careful when copy pasting, check you've changed everything that needs changing
+- Be wary of special cases, and when you do define one, be very sure you've correctly identified the full extent of their implications
 
 ## STL
 
