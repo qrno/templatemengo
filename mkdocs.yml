@@ -7,6 +7,7 @@ theme:
     accent: yellow
   features:
     - content.code.annotate
+    - content.code.copy
   logo: assets/flamengo.png
   favicon: assets/flamengo.png
 
