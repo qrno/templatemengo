@@ -1,6 +1,6 @@
 # Purr
 
-This is a description of really educational greedy solution to an AtCoder problem. It may be obvious to some of you, but given the problem is rated 1835 on AtCoder, which is equivalent to 2100 on Codeforces, I'd say it is a relatively challenging problem.
+This is a really educational greedy solution to an AtCoder problem. It may be obvious to some of you, but given the problem is rated 1835 on AtCoder, which is equivalent to 2100 on Codeforces, I'd say it is a pretty challenging problem.
 
 The following is [(abc214_e) Packing Under Range Regulations](https://atcoder.jp/contests/abc214/tasks/abc214_e) with a very slightly modified statement:
 
@@ -47,10 +47,26 @@ There's never a point in leaving a box empty if you're holding any bombs. You wo
 
 Now imagine you're at box $6$, and you're holding three bombs which are going to explode at times $7$, $9$ and $10$.
 You can get rid of a single one of them. Which bomb do you get rid of?
-I _really_ hope the answer is clear or else I hope you don't find yourself with multiple ticking bombs.
+If you aren't sure of the answer I really hope you don't find yourself in possession of multiple ticking bombs.
 
-You will always want to get rid of the bomb that is closer to exploding.
-Sometimes this isn't absolutely necessary, but it would be silly not to. Getting rid of it gives you the best chance of survival.
+You should always get rid of the bomb that is closer to exploding.
+Sometimes this isn't absolutely necessary, but it would be silly not to.
+Getting rid of it gives you the best chance of survival.
+It's easy to see how this would be right intuitively, but I provide a proof for the sake of completeness.
+
+### Proof
+
+Imagine some configuration of bomb choices where you didn't explode.
+Let's say that at some point you didn't get rid of the bomb closer to exploding $X$,
+but rather some other bomb $Y$ which would explode later.
+You only got rid of $X$ some time later.
+
+If you switch the positions of bombs $X$ and $Y$ you would still have a valid configuration.
+$X$ moved backwards in the switch, so it clearly still doesn't explode.
+$Y$ moved ahead, but it moved to a position where $X$ would have exploded, and by definition $Y$ explodes after than $X$.
+
+So now you've got a configuration with less "inversions", that is, there are less points where you chose the "wrong" bomb.
+If you keep doing this process, you can transform any valid configuration into the one we would get by our greedy, while keeping it valid. This means that if a solution exists, our greedy is a valid solution.
 
 ### Implementation
 

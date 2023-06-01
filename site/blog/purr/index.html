@@ -420,6 +420,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    Proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
@@ -746,6 +753,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#proof" class="md-nav__link">
+    Proof
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
@@ -780,7 +794,7 @@
 
 
 <h1 id="purr">Purr</h1>
-<p>This is a description of really educational greedy solution to an AtCoder problem. It may be obvious to some of you, but given the problem is rated 1835 on AtCoder, which is equivalent to 2100 on Codeforces, I'd say it is a relatively challenging problem.</p>
+<p>This is a really educational greedy solution to an AtCoder problem. It may be obvious to some of you, but given the problem is rated 1835 on AtCoder, which is equivalent to 2100 on Codeforces, I'd say it is a pretty challenging problem.</p>
 <p>The following is <a href="https://atcoder.jp/contests/abc214/tasks/abc214_e">(abc214_e) Packing Under Range Regulations</a> with a very slightly modified statement:</p>
 <h2 id="problem-statement">Problem Statement</h2>
 <p>There are <span class="arithmatex">\(10^9\)</span> boxes numbered <span class="arithmatex">\(1, 2, \ldots, 10^9\)</span> and <span class="arithmatex">\(N\)</span> balls numbered <span class="arithmatex">\(1, 2, \ldots, N\)</span>.</p>
@@ -811,9 +825,21 @@ If you meet a person, you <em>need</em> to take the ball they're holding.</p>
 <p>There's never a point in leaving a box empty if you're holding any bombs. You won't be able to come back to it and get rid of some future bomb anyways. Might as well take some weight off your back. But you do have a choice in this problem: which of the bombs to discard.</p>
 <p>Now imagine you're at box <span class="arithmatex">\(6\)</span>, and you're holding three bombs which are going to explode at times <span class="arithmatex">\(7\)</span>, <span class="arithmatex">\(9\)</span> and <span class="arithmatex">\(10\)</span>.
 You can get rid of a single one of them. Which bomb do you get rid of?
-I <em>really</em> hope the answer is clear or else I hope you don't find yourself with multiple ticking bombs.</p>
-<p>You will always want to get rid of the bomb that is closer to exploding.
-Sometimes this isn't absolutely necessary, but it would be silly not to. Getting rid of it gives you the best chance of survival.</p>
+If you aren't sure of the answer I really hope you don't find yourself in possession of multiple ticking bombs.</p>
+<p>You should always get rid of the bomb that is closer to exploding.
+Sometimes this isn't absolutely necessary, but it would be silly not to.
+Getting rid of it gives you the best chance of survival.
+It's easy to see how this would be right intuitively, but I provide a proof for the sake of completeness.</p>
+<h3 id="proof">Proof</h3>
+<p>Imagine some configuration of bomb choices where you didn't explode.
+Let's say that at some point you didn't get rid of the bomb closer to exploding <span class="arithmatex">\(X\)</span>,
+but rather some other bomb <span class="arithmatex">\(Y\)</span> which would explode later.
+You only got rid of <span class="arithmatex">\(X\)</span> some time later.</p>
+<p>If you switch the positions of bombs <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> you would still have a valid configuration.
+<span class="arithmatex">\(X\)</span> moved backwards in the switch, so it clearly still doesn't explode.
+<span class="arithmatex">\(Y\)</span> moved ahead, but it moved to a position where <span class="arithmatex">\(X\)</span> would have exploded, and by definition <span class="arithmatex">\(Y\)</span> explodes after than <span class="arithmatex">\(X\)</span>.</p>
+<p>So now you've got a configuration with less "inversions", that is, there are less points where you chose the "wrong" bomb.
+If you keep doing this process, you can transform any valid configuration into the one we would get by our greedy, while keeping it valid. This means that if a solution exists, our greedy is a valid solution.</p>
 <h3 id="implementation">Implementation</h3>
 <p>Just simulating the situation above will give you an <span class="arithmatex">\(\mathcal{O}(N\log N)\)</span> solution. The <span class="arithmatex">\(\log\)</span> comes from sorting the balls in your inventory (with a priority queue for instance).</p>
 <p>Go through the positions from <span class="arithmatex">\(1\)</span> to <span class="arithmatex">\(10^9\)</span> getting any balls you come across and getting rid of them as you can. If any bomb explodes you lose.</p>
