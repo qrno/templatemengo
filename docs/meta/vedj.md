@@ -11,3 +11,5 @@
 ## Day 2
 
 [Educational Codeforces Round 96](https://codeforces.com/contest/1430)
+
+- cebolinha: $2088 + 121 = 2209$

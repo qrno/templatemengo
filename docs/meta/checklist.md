@@ -2,6 +2,7 @@
 
 ## Thinking about solution
 
+- Immediately play with the sample cases, you may have understood the problem wrong
 - Pay close attention to the constraints
 - _Always_ consider doing Binary Search on the answer
 
