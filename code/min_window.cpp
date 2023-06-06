@@ -1,3 +1,4 @@
+// Be careful with case W = 0
 struct MinWindow {
   int W;
   deque<pair<int, int>> Q;

@@ -1,6 +1,11 @@
-template<unsigned P>
+#include <bits/stdc++.h>
+using namespace std;
+
+template <unsigned P>
 struct Z {
   unsigned value;
+
+  constexpr Z() : value(0) {}
 
   template<typename T, typename = enable_if_t<std::is_integral<T>::value>>
   constexpr Z(T a) : value((((long long)a % P) + P) % P) {}
