@@ -1,12 +1,12 @@
 # Disjoint Set Union
 
-## Implementation 
+## Implementation
 
 !!! warning
     The implementation uses indices [0, n-1]
 
 ```cpp title="DSU"
---8<-- "dsu.cpp"
+--8<-- "data_structures/dsu.cpp"
 ```
 
 This implementation can be tested on [Library Checker - Unionfind](https://judge.yosupo.jp/problem/unionfind). [[Submission]](https://judge.yosupo.jp/submission/110413)

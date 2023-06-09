@@ -5,7 +5,7 @@
 This is based on the implementation on [cp-algorithms](https://cp-algorithms.com/graph/dinic.html#implementation). But in my opinion this one is much more organized.
 
 ```cpp title="Dinitz"
---8<-- "dinitz.cpp"
+--8<-- "graphs/dinitz.cpp"
 ```
 
 ## Dinitz Min-Cost
@@ -16,5 +16,5 @@ This is lightly based on the article on [cp-algorithms](https://cp-algorithms.co
 It uses [SPFA](https://cp-algorithms.com/graph/bellman_ford.html#implementation_1) instead of Bellman-Ford since it is usually much faster.
 
 ```cpp title="Dinitz Min-Cost"
---8<-- "dinitz_mincost.cpp"
+--8<-- "graphs/dinitz_mincost.cpp"
 ```

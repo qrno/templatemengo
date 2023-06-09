@@ -44,5 +44,14 @@ No virtual required since there was AtCoder, Codeforces and [Mineira Marathon](h
 - cebolinha: $2209 + 37 = 2246$
 - EYZ: $1555 - 58 = 1497$
 
+### Upsolving Quirino
+
 - [ ] E - Colored Subgraphs
 - [ ] F - Strange Triples
+
+## Day 5
+
+[Educational Codeforces Round 148](https://codeforces.com/contest/1832)
+
+- cebolinha: $2246 + 87 = 2333$
+- EYZ: $1497 - 19 = 1478$

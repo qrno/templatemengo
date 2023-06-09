@@ -5,8 +5,8 @@
 Given a list of masks, count for each possible mask how many masks it is a submask of.
 
 ```cpp title="Number of supermasks"
-const int MAXB = 15;
-vector<int> amount[1 << MAXB];
+const int MAXB = 20;
+vector<int> amount(1 << MAXB);
 
 for (int b = MAXB-1; b >= 0; b--) {
   for (int j = 0; j < 1 << MAXB; j++) {

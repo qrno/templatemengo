@@ -5,7 +5,7 @@
 Specify a window `W` and as you push new elements, it will tell you the smallest within `W` of the last element.
 
 ```cpp title="Minimum Window"
---8<-- "min_window.cpp"
+--8<-- "data_structures/min_window.cpp"
 ```
 
 

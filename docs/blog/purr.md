@@ -1,8 +1,8 @@
-# Purr
+# Purr =^..^= Packing Under Range Regulations
 
-This is a really educational greedy solution to an AtCoder problem. It may be obvious to some of you, but given the problem is rated 1835 on AtCoder, which is equivalent to 2100 on Codeforces, I'd say it is a pretty challenging problem.
+This is a simple and educational greedy solution to an AtCoder problem.
 
-The following is [(abc214_e) Packing Under Range Regulations](https://atcoder.jp/contests/abc214/tasks/abc214_e) with a very slightly modified statement:
+The following is [(abc214_e) Packing Under Range Regulations](https://atcoder.jp/contests/abc214/tasks/abc214_e): (slightly modified)
 
 ## Problem Statement
 
@@ -21,62 +21,84 @@ Determine whether it is possible to put all $N$ balls in the boxes so that the f
 
 ## How to solve it
 
-I suggest you try your best to solve the problem so you can may get familiar with its challenges.
+I suggest you try your best to solve the problem before continuining.
 
-### My bad solution
+### My initial solution
 
-When I first read this problem I was reminded of [Hall's Marriage Theorem](https://en.wikipedia.org/wiki/Hall%27s_marriage_theorem), which led to a [very convoluted solution](https://atcoder.jp/contests/abc214/submissions/37551484) involving lazy segment trees and ordered sets.
-But this isn't the solution we'll discuss, since the problem's editorial outlines a much more elegant solution which I've found useful many times since.
+Initially, I tried a
+[more complicated solution](https://atcoder.jp/contests/abc214/submissions/37551484)
+based on
+[Hall's Marriage Theorem](https://en.wikipedia.org/wiki/Hall%27s_marriage_theorem).
+However, the problem's editorial outlines a much more elegant solution that we will discuss.
 
-### Story
+### Visualizing the Problem
 
-You walk along the boxes, from $1$ to $10^9$. Never turning back.
-Behind some of the boxes there may be one or more people, each holding a ball, which they want to hand off to you.
-The person with ball $i$ is behind the box $L_i$.
-If you meet a person, you _need_ to take the ball they're holding.
+Imagine you're walking along the boxes from $1$ to $10^9$ without turning back.
+Some of the boxes may have people behind them, each holding a ball to give you.
+The person with ball $i$ is behind box $L_i$.
+Whenever you encounter a person, you take the ball they're holding.
 
-At any moment you can put any of the balls you're holding inside of the box in front of you. You can even put in the ball the person is behind the box just gave you. But the box only holds a _single_ ball.
+At any moment you can place any ball you're holding into the box in front of you,
+including the one just given to you.
+However, each box can only hold one ball.
 
-But there is a problem, each ball is actually a ticking bomb. More specifically, ball $i$ is a bomb that will kill you if you don't put it into a box by the time you're past position $R_i$.
+But there's a twist: each ball is actually a ticking bomb.
+Ball $i$ is a bomb that will explode and kill you if you don't put it into a box
+before passing position $R_i$.
 
-### What it means
+### Understanding the Greedy
 
-I hope it is clear how the story above is equivalent to the initial problem. I like framing the problem like this because it makes it much clearer what you're supposed to do.
+The story above is equivalent to the initial problem statement,
+but presenting it like this helps make the greedy solution more intuitive.
 
-There's never a point in leaving a box empty if you're holding any bombs. You won't be able to come back to it and get rid of some future bomb anyways. Might as well take some weight off your back. But you do have a choice in this problem: which of the bombs to discard.
+There's never a point in leaving a box empty if you're holding any bombs.
+You won't be able to come back to it later and leave a bomb there,
+so you might as well take some weight off your back right now.
+However, you still have a choice to make: which of the bombs should you discard?
 
-Now imagine you're at box $6$, and you're holding three bombs which are going to explode at times $7$, $9$ and $10$.
-You can get rid of a single one of them. Which bomb do you get rid of?
-If you aren't sure of the answer I really hope you don't find yourself in possession of multiple ticking bombs.
+For example, imagine you're holding three bombs that will explode at times $7$, $8$, and $10$.
+You can discard a single bomb. Which one should you choose?
 
-You should always get rid of the bomb that is closer to exploding.
-Sometimes this isn't absolutely necessary, but it would be silly not to.
-Getting rid of it gives you the best chance of survival.
-It's easy to see how this would be right intuitively, but I provide a proof for the sake of completeness.
+The correct approach is to always get rid of the bomb closest to exploding.
+Although this may not be strictly necessary, there's no reason not to do it.
+It's intuitive to see how this is correct, but let's provide a proof for completeness:
 
 ### Proof
 
-Imagine some configuration of bomb choices where you didn't explode.
-Let's say that at some point you didn't get rid of the bomb closer to exploding $X$,
-but rather some other bomb $Y$ which would explode later.
-You only got rid of $X$ some time later.
+Consider a configuration of bomb choices where no bombs explode.
+Let's say that at some point, instead of discarding the bomb closer to exploding,
+denoted as $X$, you discard some other bomb $Y$ that would explode later.
+You only discard $X$ at a later time.
 
-If you switch the positions of bombs $X$ and $Y$ you would still have a valid configuration.
-$X$ moved backwards in the switch, so it clearly still doesn't explode.
-$Y$ moved ahead, but it moved to a position where $X$ would have exploded, and by definition $Y$ explodes after than $X$.
+If we switch the positions of bombs $X$ and $Y$, we would still have a valid configuration.
+$X$ would be discarded earlier than before, so it clearly still wouldn't explode.
+$Y$ would be discarded later,
+but it would be discarded in position where $X$ still wouldn't have exploded,
+and $X$ explodes earlier than $Y$.
 
-So now you've got a configuration with less "inversions", that is, there are less points where you chose the "wrong" bomb.
-If you keep doing this process, you can transform any valid configuration into the one we would get by our greedy, while keeping it valid. This means that if a solution exists, our greedy is a valid solution.
+With this switch, we obtain a configuration with less "inversions",
+meaning there are fewer positions where we chose the "wrong" bomb.
+By repeating this process,
+we can transform any valid configuration into the one we would get using our greedy approach,
+without ever making it invalid.
+Therefore, if a solution exists, our greedy approach is a valid solution.
 
 ### Implementation
 
-Just simulating the situation above will give you an $\mathcal{O}(N\log N)$ solution. The $\log$ comes from sorting the balls in your inventory (with a priority queue for instance).
+The implementation consists of simulating the situation described above,
+resulting in an $\mathcal{O}(N\log N)$ solution.
+The $\log N$ factor comes from sorting the balls in our inventory, for example, using a priority queue.
 
-Go through the positions from $1$ to $10^9$ getting any balls you come across and getting rid of them as you can. If any bomb explodes you lose.
+We start from position $1$ and iterate through the positions up to $10^9$,
+taking any balls we encounter and discarding them as possible.
+Always picking the bomb closer to exploding.
+If any bomb explodes, there's no solution.
 
-It is also important that if you don't have any balls in your inventory you skip to the next person that will give you a ball.
+It is important to note that if our inventory is empty,
+we should skip to the next box where you'll be given a ball.
 
-If you do get stuck, reference the problem's [editorial](https://atcoder.jp/contests/abc214/editorial/2446).
+If you get stuck, refer to the problem's [editorial](https://atcoder.jp/contests/abc214/editorial/2446),
+where a nice implementation can be found.
 
 ## Other problems
 
@@ -84,3 +106,7 @@ Here are two problems that can be solved if you're able to reduce them to Purr:
 
 - [(agc008_d) Kth-K](https://atcoder.jp/contests/agc008/tasks/agc008_d)
 - [(CF555_b) Case of Fugitive](https://codeforces.com/problemset/problem/555/B)
+
+Curiously, a few days after I wrote this blog, this technique showed up in an AtCoder Beginner Contest:
+
+- [(abc304_h) Constrained Topological Sort](https://atcoder.jp/contests/abc304/tasks/abc304_h)
