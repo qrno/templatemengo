@@ -34,7 +34,7 @@ No virtual required since there was AtCoder, Codeforces and [Mineira Marathon](h
 
 ### Upsolving Quirino
 
-- [ ] L - Bacon e a Árvore Mágica
+- [X] L - Bacon e a Árvore Mágica
 - [ ] N - Trapaça na Pastelaria
 
 ## Day 4
@@ -55,3 +55,7 @@ No virtual required since there was AtCoder, Codeforces and [Mineira Marathon](h
 
 - cebolinha: $2246 + 87 = 2333$
 - EYZ: $1497 - 19 = 1478$
+
+### Upsolving Quirino
+
+- [ ] F - Zombies
