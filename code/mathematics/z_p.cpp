@@ -1,6 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
 template <unsigned P>
 struct Z {
   unsigned value;

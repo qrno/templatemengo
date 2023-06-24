@@ -9,6 +9,19 @@
  - Expectation: We should try to solve at least 6 problems but 7 or 8 would be good
  - Result: Solved 8 problems, if we had 2 or 3 extra minutes we would have solved J as well
 
+## 2023-06-23
+
+ - Contest: [Brazilian ICPC Summer School 2017, Contest 2017-01-31](https://codeforces.com/group/eqgxxTNwgd/contest/101245)
+ - Location: LINF 1 - UnB
+ - Duration: 5h (did about 4h)
+ - Team: eyz, cebolinha, vilsu
+
+### Upsolving
+ - [ ] B. Prefix-function to z-function
+ - [ ] F. Fibonacci Strings
+ - [ ] N. Sum and Product
+
+
 ## Future Gyms
 
 - [Universal Cup. Stage 4: Ukraine](https://codeforces.com/gym/104197)
