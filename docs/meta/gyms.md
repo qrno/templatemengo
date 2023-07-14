@@ -58,7 +58,7 @@
 ## 2023-07-13
 
  - Contest: [UTPC Contest 09-17-21 Div. 1 (Advanced)](https://codeforces.com/gym/103295)
- - Location: quirino's house
+ - Location: Remote
  - Duration: 2h
  - Team: cebolinha
  - Result: Solved 9/11, didn't even read M. Wasted a lot of time on silly coding mistakes on J and L.
@@ -67,6 +67,18 @@
  - [ ] K. Alloy Factory
  - [ ] M. Ominous Chess
 
+## 2023-07-14
+
+ - Contest: [UTPC Contest 03-24-23 Div. 1 (Advanced)](https://codeforces.com/gym/104262)
+ - Location: Remote
+ - Duration: 2h
+ - Team: cebolinha, EYZ
+ - Result: Solved 6/8. Didn't even read J, tried G for some time. Not bad.
+
+### Upsolving
+ - [ ] G. Path to Pluto
+ - [ ] J. Rocket Fuel
+
 ## Future Gyms
 
 - [Universal Cup. Stage 4: Ukraine](https://codeforces.com/gym/104197)
@@ -74,4 +86,3 @@
 - [Universal Cup. Stage 14: Ranoa](https://codeforces.com/gym/104197)
 - [2022 ICPC Southeastern Europe](https://codeforces.com/gym/104114)
 - [The 2021 ICPC Asia Nanjing](https://codeforces.com/gym/103470)
-- [UTPC Contest 09-17-21 Div. 1 (Advanced)](https://codeforces.com/gym/103295)
