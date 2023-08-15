@@ -1,8 +1,21 @@
 # Bitmasks
 
+## Iterating through all subsmasks
+
+This technique can be found on this [article](https://cp-algorithms.com/algebra/all-submasks.html).
+
+```cpp title="Iterating through all submasks of m"
+// doesn't go through 0
+for (int s=m; s; s=(s-1)&m) {}
+// goes through 0
+for (int s=m;  ; s=(s-1)&m) {
+    if (s == 0) break;
+}
+```
+
 ## Number of supermasks
 
-Given a list of masks, count for each possible mask how many masks it is a submask of.
+Given a list of masks, count for each possible mask how many masks it is a submask of. This looks a lot like SOS DP?
 
 ```cpp title="Number of supermasks"
 const int MAXB = 20;
