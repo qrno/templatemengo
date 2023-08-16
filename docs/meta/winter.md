@@ -5,7 +5,11 @@
 ## 2023-08-15
 
  - [CerealCodes](https://www.cerealcodes.org/contestinfo) contest in the afternoon.
+    - Disastrous performance
+    - Solved two questions, wasted a lot of time on silly stuff
+    - Probably could solve C as well. On a very good day even D and E.
  - [edu's Yellow Challenge #8](#) at night.
+    - Pretty nice problems. One of them was on a Gym so I got it for free.
  - Upsolve [ST and TS Palindrome](https://atcoder.jp/contests/arc155/tasks/arc155_a) from [edu's Cyan Challenge! #1](https://kenkoooo.com/atcoder/#/contest/show/32e40c2c-8ad8-4ecf-a40a-3f0d74ab7187)
 
 ## 2023-08-16
