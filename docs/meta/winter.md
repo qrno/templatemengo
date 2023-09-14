@@ -11,6 +11,7 @@
  - [edu's Yellow Challenge #8](#) at night.
     - Pretty nice problems. One of them was on a Gym so I got it for free.
  - Upsolve [ST and TS Palindrome](https://atcoder.jp/contests/arc155/tasks/arc155_a) from [edu's Cyan Challenge! #1](https://kenkoooo.com/atcoder/#/contest/show/32e40c2c-8ad8-4ecf-a40a-3f0d74ab7187)
+    - Not too bad after all :P
 
 ## 2023-08-16
  - [RTTR #2](#) in the morning.
@@ -27,6 +28,14 @@
 - [ ] [Tree Isomorphism I](https://cses.fi/problemset/task/1700)
 - [ ] [Regular Forestation](https://codeforces.com/contest/1252/problem/F)
 - [ ] [Generator Tree](https://codeforces.com/gym/103640/problem/G)
+- [ ] [Favorite Tree](https://codeforces.com/gym/104252/problem/F)
+
+### DSU on Trees Saga
+- [ ] [Blood Cousins Return](https://codeforces.com/contest/246/problem/E)
+- [ ] [Tree-String Problem](https://codeforces.com/contest/291/problem/E)
+- [ ] [Dominant Indices](https://codeforces.com/contest/1009/problem/F)
+- [ ] [Digit Tree](https://codeforces.com/contest/716/problem/E)
+- [ ] [Arpa’s letter-marked tree and Mehrdad’s Dokhtar-kosh paths](https://codeforces.com/contest/741/problem/D)
 
 ## Ponder
 
