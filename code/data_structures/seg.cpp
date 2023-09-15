@@ -1,40 +1,57 @@
-// Based on celiopassos/competitive-programming
-template <class T>
-struct SegmentTree {
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int long long
+
+template<class Node>
+class Seg {
   int N;
-  vector<T> st;
-
-  explicit SegmentTree(int N) : N(N), st(2 * N) {}
-
-  template <typename Iterator>
-  SegmentTree(Iterator first, Iterator last) : SegmentTree(last-first) {
-    copy(first, last, st.begin()+N);
-    for (int p = N-1; p > 0; --p) {
-      st[p] = st[p << 1] + st[p << 1 | 1];
+  vector<Node> T;
+public:
+  explicit Seg(int N) : N(N), T(2*N) {}
+  Node query(int l, int r) {
+    Node rl, rr;
+    for (l+=N, r+=N+1; l<r; l/=2, r/=2) {
+      if (l&1) rl = rl+T[l++];
+      if (r&1) rr = T[--r]+rr;
     }
+    return rl+rr;
   }
-
-  void modify(int p, T value) {
-    p += N;
-    st[p] = value;
-    while (p > 1) {
-      p >>= 1;
-      st[p] = st[p << 1] + st[p << 1 | 1];
-    }
-  }
-
-  T query(int l, int r) const {
-    T resl = T(), resr = T();
-    for (l += N, r += N; l < r; l >>= 1, r >>= 1) {
-      if (l & 1) {
-        resl = resl + st[l];
-        ++l;
-      }
-      if (r & 1) {
-        --r;
-        resr = st[r] + resr;
-      }
-    }
-    return resl + resr;
+  void update(int p, Node const& val) {
+    for (T[p+=N]=val; p /= 2;)
+      T[p] = T[2*p]+T[2*p+1];
   }
 };
+
+signed main() {
+  ios::sync_with_stdio(false); cin.tie(nullptr);
+
+  int N, Q;
+  cin >> N >> Q;
+
+  struct Node {
+    int x;
+    Node() : x(0) {}
+    Node(int x) : x(x) {}
+    Node operator+(Node const& b) {
+      return Node(x + b.x);
+    }
+  };
+  Seg<Node> st(N);
+
+  for (int i = 0; i < N; i++) {
+    int x; cin >> x;
+    st.update(i, x);
+  }
+
+  while (Q--) {
+    int op; cin >> op;
+    if (op == 1) {
+      int p, x; cin >> p >> x; p--;
+      st.update(p, x);
+    } else {
+      int l, r; cin >> l >> r; l--, r--;
+      cout << st.query(l, r).x << endl;
+    }
+  }
+}
