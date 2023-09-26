@@ -40,7 +40,6 @@ enum Direction {
   Right = +1,
 };
 
-// Which side of AB> is x?
 Direction side(Point const& a, Point const& b, Point const& x) {
   auto t = (b-a) ^ (x-a);
   return static_cast<Direction>((t > EPS) - (t < -EPS));
@@ -66,8 +65,4 @@ Point rot90ccw(Point const& a) { return {-a.y,  a.x}; }
 
 ld proj(Point const& a, Point const& b) {
   return a * b / norm(b);
-}
-
-ld angle(Point const& a, Point const& b) {
-
 }

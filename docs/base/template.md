@@ -1,9 +1,9 @@
-# Template
+# Full Template
 
-## Full Template
+## Code
 
 ```cpp title="Full template"
---8<-- "template.cpp"
+--8<-- "base/template.cpp"
 ```
 
 ## Pragmas

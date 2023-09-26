@@ -1,18 +1,24 @@
+//{{{ FenwickTree
 struct FenwickTree {
-  int n;
-  vector<int> bit;
+  int N;
+  vector<int> data;
 
-  FenwickTree(int n) : n(n), bit(n) {}
+  FenwickTree(int N) : N(N), data(N) {}
+
+  void add(int idx, int delta) {
+    for (; idx < N; idx |= idx+1)
+      data[idx] += delta;
+  }
 
   int sum(int r) {
     int ret = 0;
     for (; r >= 0; r &= r+1, r--)
-      ret += bit[r];
+      ret += data[r];
     return ret;
   }
 
-  void add(int idx, int delta) {
-    for (; idx < n; idx |= idx+1)
-      bit[idx] += delta;
+  int sum(int l, int r) {
+    return sum(r) - sum(l-1);
   }
 };
+//}}}

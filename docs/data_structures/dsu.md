@@ -2,14 +2,14 @@
 
 ## Implementation
 
-!!! warning
-    The implementation uses indices [0, n-1]
+Includes **union by size** and **path compression** optimizations.
 
-```cpp title="DSU"
+```cpp title="Disjoint Set Union"
 --8<-- "data_structures/dsu.cpp"
 ```
 
-This implementation can be tested on [Library Checker - Unionfind](https://judge.yosupo.jp/problem/unionfind). [[Submission]](https://judge.yosupo.jp/submission/110413)
+This implementation can be tested on [Library Checker - Unionfind](https://judge.yosupo.jp/problem/unionfind)
+[[Submission]](https://judge.yosupo.jp/submission/162973)
 
 ## Problems
 

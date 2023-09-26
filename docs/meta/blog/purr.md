@@ -1,3 +1,7 @@
+Available on [Codeforces](https://codeforces.com/blog/entry/117138).
+Pretty simple technique but found it useful a couple times.
+
+
 # Purr =^..^= Packing Under Range Regulations
 
 This is a simple and educational greedy solution to an AtCoder problem.
