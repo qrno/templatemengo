@@ -135,4 +135,31 @@ vector<Point<T>> seg_has_inter(Line<T> const& l1, Line<T> const& l2) {
   if (l2.inside_seg(l1.p2)) return true;
   return false;
 }
+
+template<typename T>
+struct Circle {
+  Point<T> c;
+  T r;
+  Circle (Point<T> const& c,  T r) : c(c), r(r) {}
+  bool inside(Point<T> const& a) const {
+    return norm(a-c) <= r + EPS;
+  }
+};
+
+template<typename T>
+vector<Point<T>> inter_circle(Circle<T> const& c1, Circle<T> const& c2) {
+  if (c1.c == c2.c) return {};
+  Point vec = c2.c - c1.c;
+  T d2 = vec * vec;
+  T sum = c1.r + c2.r;
+  T dif = c1.r - c2.r;
+  T p = (d2 + c1.r * c1.r - c2.r * c2.r) / (2 * d2);
+  T h2 = c1.r * c1.r - p * p * d2;
+  if (sum * sum < d2 || dif * dif > d2) return {};
+  Point mid = c1.c + vec*p;
+  Point per = Point(-vec.y, vec.x) * sqrt(max(T(), h2) / d2);
+  if (per == Point<T>()) return {mid};
+  return {mid + per, mid - per};
+}
 //}}}
+

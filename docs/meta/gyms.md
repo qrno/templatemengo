@@ -79,6 +79,17 @@
  - [ ] G. Path to Pluto
  - [ ] J. Rocket Fuel
 
+## 2023-09-23
+
+ - Contest: [2023 Argentinian Programming Tournament (TAP)](https://codeforces.com/gym/104603)
+ - Location: quirino's house
+ - Duration: 5h
+ - Team: cebolinha, EYZ, vilsu
+ - Result: Solved 13/14. Pretty great.
+
+### Upsolving
+ - [ ] K. Kitties
+
 ## Future Gyms
 
 - [Universal Cup. Stage 4: Ukraine](https://codeforces.com/gym/104197)
@@ -86,3 +97,8 @@
 - [Universal Cup. Stage 14: Ranoa](https://codeforces.com/gym/104197)
 - [2022 ICPC Southeastern Europe](https://codeforces.com/gym/104114)
 - [The 2021 ICPC Asia Nanjing](https://codeforces.com/gym/103470)
+- [NWERC 2021](https://codeforces.com/gym/104064)
+- [NWERC 2020](https://codeforces.com/gym/103049)
+- [NWERC 2019](https://codeforces.com/gym/102500)
+- [NWERC 2018](https://codeforces.com/gym/102483)
+- [NWERC 2017](https://codeforces.com/gym/101623)

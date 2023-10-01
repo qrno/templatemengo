@@ -1,5 +1,6 @@
-V<int> bfs(int source) {
-  V<int> dist(sz(G), -1);
+//{{{ Breadth First Search
+vector<int> bfs(int source, vector<vector<int>> const& G) {
+  vector<int> dist(size(G), -1);
   queue<int> Q;
   dist[source] = 0;
   Q.push(source);
@@ -16,4 +17,4 @@ V<int> bfs(int source) {
 
   return dist;
 }
-
+//}}}
