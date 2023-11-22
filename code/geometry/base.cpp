@@ -1,13 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-#define int long long
-
-signed main() {
-  ios::sync_with_stdio(false); cin.tie(nullptr);
-
-}
-
 //{{{ Geometry Base
 const long double EPS = 1e-9;
 
@@ -75,9 +67,30 @@ Point<T> reflection(Point<T> const& p, Point<T> const& a, Point<T> const& b) {
 }
 
 template<typename T>
+T sarea(Point<T> const& a, Point<T> const& b, Point<T> const& c) {
+  return ((b-a)^(c-b))/2;
+}
+
+template<typename T>
 int side(Point<T> const& p, Point<T> const& a, Point<T> const& b) {
   T x = (b-a) ^ (p-a);
   return (x > EPS) - (x < -EPS);
+}
+
+template<typename T>
+Point<T> rot(Point<T> const& p, long double a) {
+  return Point{p.x * cos(a) - p.y * sin(a),
+               p.y * cos(a) + p.x * sin(a)};
+}
+
+template<typename T>
+Point<T> rot90cw(Point<T> const& a) {
+  return Point{a.y, -a.x};
+}
+
+template<typename T>
+Point<T> rot90ccw(Point<T> const& a) {
+  return Point{-a.y, a.x};
 }
 
 // Everything is untested
@@ -126,7 +139,7 @@ vector<Point<T>> inter_seg(Line<T> const& l1, Line<T> const& l2) {
 }
 
 template<typename T>
-vector<Point<T>> seg_has_inter(Line<T> const& l1, Line<T> const& l2) {
+bool seg_has_inter(Line<T> const& l1, Line<T> const& l2) {
   if (side(l2.p1, l1.p1, l1.p2) * side(l2.p2, l1.p1, l1.p2) < 0
    && side(l1.p1, l2.p1, l2.p2) * side(l1.p2, l2.p1, l2.p2) < 0) return true;
   if (l1.inside_seg(l2.p1)) return true;
@@ -134,6 +147,27 @@ vector<Point<T>> seg_has_inter(Line<T> const& l1, Line<T> const& l2) {
   if (l2.inside_seg(l1.p1)) return true;
   if (l2.inside_seg(l1.p2)) return true;
   return false;
+}
+
+template<typename T>
+T point_line_dist(Point<T> const& p, Line<T> const& l) {
+  return 2 * abs(sarea(p, l.p1, l.p2)) / norm(l.p1-l.p2);
+}
+
+template<typename T>
+T point_seg_dist(Point<T> const& p, Line<T> const& l) {
+  if ((l.p2-l.p1)*(p-l.p1) < 0) return norm(l.p1-p);
+  if ((l.p1-l.p2)*(p-l.p2) < 0) return norm(l.p2-p);
+  return point_line_dist(p, l);
+}
+
+template<typename T>
+T seg_dist(Line<T> const& l1, Line<T> const& l2) {
+  if (seg_has_inter(l1, l2)) return T();
+  return min({point_seg_dist(l1.p1, l2),
+              point_seg_dist(l1.p2, l2),
+              point_seg_dist(l2.p1, l1),
+              point_seg_dist(l2.p2, l1)});
 }
 
 template<typename T>
@@ -161,5 +195,39 @@ vector<Point<T>> inter_circle(Circle<T> const& c1, Circle<T> const& c2) {
   if (per == Point<T>()) return {mid};
   return {mid + per, mid - per};
 }
-//}}}
 
+template<typename T>
+bool inside(Point<T> const& p, Point<T> const& a, Point<T> const& b, Point<T> const& c) {
+  int x = side(p, a, b);
+  int y = side(p, b, c);
+  int z = side(p, c, a);
+  return !((x == 1 or y == 1 or z == 1) and (x==-1 or y == -1 or z == -1));
+}
+
+template<typename T>
+bool inside(Point<T> const& p, vector<Point<T>> const& poly) {
+  int bl = 2, br = (int)size(poly) - 1;
+  while (bl < br) {
+    /* int bm = midpoint(bl, br); */
+    int bm = (bl+br)/2;
+    if (side(p, poly[0], poly[bm]) == 1) bl = bm+1;
+    else br = bm;
+  }
+
+  return inside(p, poly[0], poly[br-1], poly[br]);
+}
+
+template<typename T>
+using Poly = vector<Point<T>>;
+
+template<typename T>
+T area(Poly<T> const& P) {
+  int N = size(P);
+  T total{};
+  for (int i = 0; i < N; i++) {
+    total += P[i].x * P[(i+1)%N].y;
+    total -= P[i].y * P[(i+1)%N].x;
+  }
+  return abs(total/2);
+}
+//}}}

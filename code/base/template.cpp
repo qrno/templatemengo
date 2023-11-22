@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Template (v1.5.1 - 2023-07-17) (codeforces:cebolinha, atcoder:edu) {{{
+// Template (v1.5.2 - 2023-10-09) (codeforces:cebolinha, atcoder:edu) {{{
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 using namespace __gnu_pbds;
@@ -18,26 +18,27 @@ using ii = pair<int, int>;
 using iii = array<int, 3>;
 
 #define V vector
-#define all(c) c.begin(), c.end()
-#define rall(c) c.rbegin(), c.rend()
-#define sz(x) (int) (x).size()
+#define all(c) begin(c), end(c)
+#define rall(c) rbegin(c), rend(c)
+#define sz(c) ((int)size(c))
 #define pb push_back
 #define eb emplace_back
 #define ff first
 #define ss second
 #define nemo ><>
 #define loop(ii, n) for (int ii = 0; ii < (n); ii++)
+#define iloop(ii, l, r) for (int ii = (l); ii <= (r); ii++)
 #define cond(c, t, f) ((c) ? (t) : (f))
 #define mem(a, b) memset((a), (b), sizeof(a))
 #define inbounds(x, l, r) ((l) <= (x) && (x) <= (r))
 #define L1(res...) [&](auto const& x){ return res; }
 #define L2(res...) [&](auto const& x, auto const& y){ return res; }
 
-template<class T, class U> inline void miq(T& a, U b){ if (a > b) a = b; }
-template<class T, class U> inline void maq(T& a, U b){ if (a < b) a = b; }
+template<class T, class U> inline void chmin(T& a, U b){ if (a > b) a = b; }
+template<class T, class U> inline void chmax(T& a, U b){ if (a < b) a = b; }
 
 template<class T, class U> auto &operator>>(istream &is, pair<T, U> &p) { return is >> p.ff >> p.ss; }
-template<class T, class U> auto &operator<<(ostream &os, pair<T, U> const& p) { return os << '(' << p.first << ' ' << p.second << ')'; }
+template<class T, class U> auto &operator<<(ostream &os, pair<T, U> const& p) { return os << '{' << p.first << ' ' << p.second << '}'; }
 
 const auto ES = "", SEP = " ";
 template<class T> auto &operator>>(istream& is, vector<T> &c) { for (auto &x : c) is >> x; return is; }

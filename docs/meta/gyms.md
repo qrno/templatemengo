@@ -90,6 +90,20 @@
 ### Upsolving
  - [ ] K. Kitties
 
+## 2023-10-01
+
+ - Contest: [2017-2018 Northwestern European Regional Contest (NWERC 2017)](https://codeforces.com/gym/101623)
+ - Location: quirino's house
+ - Duration: 5h
+ - Team: cebolinha
+ - Result: Solved 7/11. Not bad. F is a nice use of RangeSet. G is a nice geometry problem. Wasted too much time on I because of a line I forgot to delete.
+
+### Upsolving
+ - [  ] A. Ascending Photo
+ - [  ] C. Connect The Dots
+ - [  ] E. English Restaurant
+ - [  ] J. Juggling Troupe
+
 ## Future Gyms
 
 - [Universal Cup. Stage 4: Ukraine](https://codeforces.com/gym/104197)
@@ -101,4 +115,3 @@
 - [NWERC 2020](https://codeforces.com/gym/103049)
 - [NWERC 2019](https://codeforces.com/gym/102500)
 - [NWERC 2018](https://codeforces.com/gym/102483)
-- [NWERC 2017](https://codeforces.com/gym/101623)
