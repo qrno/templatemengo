@@ -5,12 +5,23 @@
  - [cebolinha](https://codeforces.com/profile/cebolinha) / [edu](https://atcoder.jp/users/edu)
  - [eyz](https://codeforces.com/profile/eyz) / [eyz](https://atcoder.jp/users/eyz)
 
-## Useful Links
+# Links
 
- - [Tiagodfs's Template](https://github.com/Tiagosf00/Competitive-Programming)
- - [WeakestTopology's Template](https://github.com/celiopassos/competitive-programming)
- - [KACTL](https://github.com/kth-competitive-programming/kactl)
- - [CP-Algorithms](https://cp-algorithms.com/)
+## Code Notebooks
+ - [Tiagodfs](https://github.com/Tiagosf00/Competitive-Programming)
+ - [WeakestTopology](https://github.com/celiopassos/competitive-programming)
+ - [brunomont](https://github.com/brunomaletta/Biblioteca)
+ - [NUS](https://github.com/ngthanhtrung23/ACM_Notebook_new)
+ - [KACTL](https://github.com/kth-competitive-programming/kactl/)
+
+## Problem Lists
  - [AtCoder Problems](https://kenkoooo.com/atcoder/#/table/)
+ - [Codeforces Problems](https://cf.kira924age.com/)
  - [Dynamic A2OJ](https://codeforcesladders.firebaseapp.com/)
+ - [OI Checklist](https://oichecklist.pythonanywhere.com/)
+
+## Resources
+ - [USACO Guide](https://usaco.guide/)
+ - [CP-Algorithms](https://cp-algorithms.com/)
  - [Algorithms Live!](https://www.youtube.com/@AlgorithmsLive)
+
