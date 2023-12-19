@@ -47,7 +47,7 @@ T norm(Point<T> const& a) {
 
 template<typename T>
 T norm2(Point<T> const& a) {
-  return sqrtl(a * a);
+  return a * a;
 }
 
 template<typename T>

@@ -1,3 +1,8 @@
+# Resources
+
+- [CGL - Aizu Online Judge](https://judge.u-aizu.ac.jp/onlinejudge/finder.jsp?course=CGL) - Loads of implementation problems.
+- [CSES - Geometry Section](https://cses.fi/problemset/)
+
 # Theory
 
 !!! warning "Counter-clockwise"
