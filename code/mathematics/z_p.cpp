@@ -1,3 +1,4 @@
+// Z_P (Modular Arithmetic) {{{
 template <unsigned P>
 struct Z {
   unsigned value;
@@ -69,3 +70,4 @@ Z<P> pow(Z<P> x, long long p) {
   }
   return res;
 }
+//}}}

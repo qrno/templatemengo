@@ -1,3 +1,4 @@
+// Combinatorics {{{
 template <unsigned P>
 struct Combinatorics {
   vector<Z<P>> fact, ifact;
@@ -17,3 +18,4 @@ struct Combinatorics {
     return k == 0 ? n == 0 : C(n + k - 1, k - 1);
   }
 };
+//}}}

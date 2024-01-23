@@ -1,3 +1,4 @@
+//{{{ Dinitz
 struct Dinitz {
   struct Edge {
     int v, u, cap, flow=0;
@@ -64,4 +65,4 @@ struct Dinitz {
     }
     return f;
   }
-};
+}; //}}}

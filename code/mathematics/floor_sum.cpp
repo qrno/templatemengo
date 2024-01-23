@@ -1,5 +1,6 @@
 //{{{ Floor Sum
-unsigned long long floor_sum_unsigned(unsigned long long n,
+// sum of floor[i=0...n-1]((a*i+b)/m)
+unsigned long long __floor_sum_unsigned(unsigned long long n,
                                       unsigned long long m,
                                       unsigned long long a,
                                       unsigned long long b) {
@@ -37,6 +38,6 @@ long long floor_sum(long long n, long long m, long long a, long long b) {
     ans -= 1ULL * n * ((b2 - b) / m);
     b = b2;
   }
-  return ans + floor_sum_unsigned(n, m, a, b);
+  return ans + __floor_sum_unsigned(n, m, a, b);
 }
 //}}}

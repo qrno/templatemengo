@@ -1,17 +1,16 @@
-vector<int> eulerian_cycle(int N, vector<pair<int, int>> const& E) {/*{{{*/
+// Eulerian Cycle {{{
+vector<int> eulerian_cycle(int N, vector<pair<int, int>> const& E) {
   int M = size(E);
 
-  vector<int> D(N);
   vector<vector<pair<int, int>>> G(N);
   for (int i = 0; i < M; i++) {
     auto [v, u] = E[i];
     G[v].push_back({u, i});
     G[u].push_back({v, i});
-    D[v]++, D[u]++;
   }
 
   for (int i = 0; i < N; i++)
-    if (D[i] % 2)
+    if (size(G[i]) % 2)
       return {};
 
   vector<int> path;
@@ -33,5 +32,5 @@ vector<int> eulerian_cycle(int N, vector<pair<int, int>> const& E) {/*{{{*/
 
   reverse(begin(path), end(path));
   return path;
-}/*}}}*/
-
+}
+//}}}
