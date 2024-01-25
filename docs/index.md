@@ -8,6 +8,7 @@
 # Links
 
 ## Code Notebooks
+ - [Templatemengo](https://github.com/qrno/templatemengo)
  - [Tiagodfs](https://github.com/Tiagosf00/Competitive-Programming)
  - [WeakestTopology](https://github.com/celiopassos/competitive-programming)
  - [brunomont](https://github.com/brunomaletta/Biblioteca)

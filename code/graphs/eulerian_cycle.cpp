@@ -1,5 +1,5 @@
 // Eulerian Cycle {{{
-vector<int> eulerian_cycle(int N, vector<pair<int, int>> const& E) {
+pair<bool, vector<int>> eulerian_cycle(int N, vector<pair<int, int>> const& E) {
   int M = size(E);
 
   vector<vector<pair<int, int>>> G(N);
@@ -11,7 +11,7 @@ vector<int> eulerian_cycle(int N, vector<pair<int, int>> const& E) {
 
   for (int i = 0; i < N; i++)
     if (size(G[i]) % 2)
-      return {};
+      return {false, {}};
 
   vector<int> path;
   vector<bool> seen(M);
@@ -28,9 +28,9 @@ vector<int> eulerian_cycle(int N, vector<pair<int, int>> const& E) {
   };
   dfs(dfs, 0);
 
-  if (size(path) != M+1) return {};
+  if (size(path) != M+1) return {false, {}};
 
   reverse(begin(path), end(path));
-  return path;
+  return {true, path};
 }
 //}}}

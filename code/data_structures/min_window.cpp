@@ -1,3 +1,4 @@
+// Minimum Window {{{
 // Be careful with case W = 0
 struct MinWindow {
   int W;
@@ -14,4 +15,4 @@ public:
 
   int get() const { return Q.front().ss; }
 };
-
+//}}}

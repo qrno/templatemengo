@@ -1,5 +1,7 @@
 # Fenwick Tree
 
+Does strictly less than a segment tree but is usually a little bit faster and shorter to code.
+
 ## Code
 
 ```cpp title="Fenwick Tree"

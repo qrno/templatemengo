@@ -1,36 +1,47 @@
+// Kosaraju {{{
 struct Kosaraju {
-  const int n;
-  V<V<int>> G, Ginv;
-  V<bool> vis;
-  V<int> comp;
+  int N;
+  vector<vector<int>> const& G;
+  vector<vector<int>> Ginv;
+  vector<bool> vis;
   stack<int> S;
 
-  explicit Kosaraju(int n) : n(n), G(n), Ginv(n), comp(n, -1) {}
+  vector<int> comp;
+  vector<vector<int>> comps;
 
-  auto add_edge(int v, int u) {
-    G[v].pb(u);
-    Ginv[u].pb(v);
+  Kosaraju(vector<vector<int>> const& G)
+    : N(size(G)), G(G), Ginv(N), vis(N), comp(N, -1) {
+    for (int i = 0; i < N; i++) {
+      for (auto u : G[i]) {
+        Ginv[u].push_back(i);
+      }
+    }
+
+    for (int i = 0; i < N; i++) if (!vis[i]) dfs(i);
+
+    fill(begin(vis), end(vis), false);
+    int cc = 0;
+    while (!S.empty()) {
+      int v = S.top();
+      S.pop();
+      if (!vis[v]) {
+        comps.push_back({});
+        scc(v, cc++);
+      }
+    }
   }
 
-  auto dfs(int v) -> void {
+  void dfs(int v) {
     vis[v] = true;
     for (auto u : G[v]) if (!vis[u]) dfs(u);
     S.push(v);
   }
 
-  auto scc(int v, int c) -> void {
-    vis[v] = true; comp[v] = c;
+  void scc(int v, int c) {
+    vis[v] = true;
+    comp[v] = c;
+    comps.back().push_back(v);
     for (auto u : Ginv[v]) if (!vis[u]) scc(u, c);
   }
-
-  auto run() {
-    vis.assign(n, false);
-    loop (i, n) if (!vis[i]) dfs(i);
-    vis.assign(n, false);
-    int cc = 0;
-    while (!S.empty()) {
-      int v = S.top(); S.pop();
-      if (!vis[v]) scc(v, cc++);
-    }
-  }
 };
+// }}}

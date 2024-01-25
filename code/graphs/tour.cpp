@@ -1,10 +1,12 @@
-//{{{ Euler Tour
+// Euler Tour {{{
 struct Tour {
-  int TIMER = -1;
-  vector<int> pre, pos, dep, who;
+  int source;
   vector<vector<int>> const& G;
 
-  Tour (int source, vector<vector<int>> const& G) : G(G) {
+  int TIMER = -1;
+  vector<int> pre, pos, dep, who;
+
+  Tour (vector<vector<int>> const& G, int source) : G(G), source(source) {
     int N = size(G);
     pre.assign(N, -1);
     pos.assign(N, -1);

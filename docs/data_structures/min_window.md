@@ -1,13 +1,12 @@
 # Minimum Window
 
-## Implementation
+Specify a window length $W$ and as you push new elements, it will tell you the smallest within $W$ of the last element.
 
-Specify a window `W` and as you push new elements, it will tell you the smallest within `W` of the last element.
+## Code
 
 ```cpp title="Minimum Window"
 --8<-- "data_structures/min_window.cpp"
 ```
-
 
 ## Problems
 

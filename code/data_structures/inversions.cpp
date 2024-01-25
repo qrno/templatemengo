@@ -1,3 +1,4 @@
+// Inversion Counting {{{
 int inversions(vector<int> const& A) {
   ordered_set<pair<int, int>> OS;
   int ans = 0;
@@ -7,4 +8,4 @@ int inversions(vector<int> const& A) {
   }
   return ans;
 }
-
+//}}}

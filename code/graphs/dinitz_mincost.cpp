@@ -1,3 +1,4 @@
+// Dinitz Min Cost {{{
 const int INF = 0x3f3f3f3f3f3f3f3f;
 
 struct Dinitz {
@@ -14,9 +15,9 @@ struct Dinitz {
   V<Edge> edges;
   V<V<int>> adj;
   void add_edge(int v, int u, int cap, int cost) {
-    edges.eb(v, u, cap, cost);
+    edges.emplace_back(v, u, cap, cost);
     adj[v].pb(sz(edges)-1);
-    edges.eb(u, v, 0, -cost);
+    edges.emplace_back(u, v, 0, -cost);
     adj[u].pb(sz(edges)-1);
   }
 
@@ -83,4 +84,4 @@ struct Dinitz {
     return total_flow;
   }
 };
-
+//}}}

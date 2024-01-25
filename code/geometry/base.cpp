@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
 //{{{ Geometry Base
 const long double EPS = 1e-9;
 

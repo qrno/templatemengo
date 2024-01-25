@@ -1,5 +1,5 @@
-//{{{ Breadth First Search
-vector<int> bfs(int source, vector<vector<int>> const& G) {
+// Breadth First Search {{{
+vector<int> bfs(vector<vector<int>> const& G, int source) {
   vector<int> dist(size(G), -1);
   queue<int> Q;
   dist[source] = 0;

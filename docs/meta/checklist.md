@@ -30,9 +30,15 @@
 ## Graphs
 
 - Add edges both ways if the graph is bidirectional
+- On problems where you remove stuff, just do it backwards.
 
 ## Beecrowd/UVa 🤮
 
 - Don't put space at the end of output
 - Check if there are multiple testcases
 
+## DP
+
+- Try to invert the order of the states - sometimes the problem becomes much easier
+- Can you use D&C DP?
+- Can you use Convex Hull Trick?
