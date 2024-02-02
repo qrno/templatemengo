@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../math/z_p/">
+        <link rel="prev" href="../../math/xor_basis/">
       
       
         <link rel="next" href="../commands/">
@@ -280,6 +280,27 @@
   
   <span class="md-ellipsis">
     Beta Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base/template_contest/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template Contest
   </span>
   
 
@@ -934,11 +955,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/xor_basis/" class="md-nav__link">
+      <a href="../../math/modular/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    XOR-Basis
+    Modular Arithmetic
   </span>
   
 
@@ -955,11 +976,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../math/z_p/" class="md-nav__link">
+      <a href="../../math/xor_basis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Modular Arithmetic
+    XOR-Basis
   </span>
   
 
@@ -1068,6 +1089,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#is-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is this ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#thinking-about-solution" class="md-nav__link">
     <span class="md-ellipsis">
       Thinking about solution
@@ -1115,7 +1145,7 @@
         <li class="md-nav__item">
   <a href="#beecrowduva" class="md-nav__link">
     <span class="md-ellipsis">
-      Beecrowd/UVa 🤮
+      Beecrowd/UVa
     </span>
   </a>
   
@@ -1125,6 +1155,15 @@
   <a href="#dp" class="md-nav__link">
     <span class="md-ellipsis">
       DP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games
     </span>
   </a>
   
@@ -1559,6 +1598,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#is-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is this ?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#thinking-about-solution" class="md-nav__link">
     <span class="md-ellipsis">
       Thinking about solution
@@ -1606,7 +1654,7 @@
         <li class="md-nav__item">
   <a href="#beecrowduva" class="md-nav__link">
     <span class="md-ellipsis">
-      Beecrowd/UVa 🤮
+      Beecrowd/UVa
     </span>
   </a>
   
@@ -1616,6 +1664,15 @@
   <a href="#dp" class="md-nav__link">
     <span class="md-ellipsis">
       DP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#games" class="md-nav__link">
+    <span class="md-ellipsis">
+      Games
     </span>
   </a>
   
@@ -1637,17 +1694,22 @@
 
 
 <h1 id="checklist">Checklist</h1>
+<h2 id="is-this">Is this <topic>?</h2>
+<ul>
+<li>Binary Search on the answer</li>
+<li>Meet in the Middle</li>
+<li>Super greedy (make a wild guess)</li>
+</ul>
 <h2 id="thinking-about-solution">Thinking about solution</h2>
 <ul>
 <li>Immediately play with the sample cases, you may have understood the problem wrong</li>
-<li>Pay close attention to the constraints</li>
-<li><em>Always</em> consider doing Binary Search on the answer</li>
+<li>Think about constraints</li>
 </ul>
 <h2 id="before-submitting">Before Submitting</h2>
 <ul>
 <li>Even if the test cases pass, make sure your code is at least doing <em>something</em></li>
-<li>If the test cases are <em>too</em> simple, come up with a couple extra ones</li>
-<li>Check if constants are big enough</li>
+<li>If the test cases are <em>too</em> simple, come up with an extra one</li>
+<li>Check constants are big enough</li>
 <li>Check time and memory limits</li>
 <li>Submit the right file</li>
 </ul>
@@ -1660,8 +1722,8 @@
 </ul>
 <h2 id="stl">STL</h2>
 <ul>
-<li>Don't call .back(), .front(), .top() on empty containers</li>
-<li>Don't change a container as you iterate through it (Even accessing a map may change it)</li>
+<li>Check for empty when calling .back(), .front(), .top() on containers</li>
+<li>Don't change a container as you iterate through it (accessing a map may change it)</li>
 <li>Always make sure your iterators are valid</li>
 </ul>
 <h2 id="graphs">Graphs</h2>
@@ -1669,7 +1731,7 @@
 <li>Add edges both ways if the graph is bidirectional</li>
 <li>On problems where you remove stuff, just do it backwards.</li>
 </ul>
-<h2 id="beecrowduva">Beecrowd/UVa 🤮</h2>
+<h2 id="beecrowduva">Beecrowd/UVa</h2>
 <ul>
 <li>Don't put space at the end of output</li>
 <li>Check if there are multiple testcases</li>
@@ -1679,6 +1741,12 @@
 <li>Try to invert the order of the states - sometimes the problem becomes much easier</li>
 <li>Can you use D&amp;C DP?</li>
 <li>Can you use Convex Hull Trick?</li>
+</ul>
+<h2 id="games">Games</h2>
+<ul>
+<li>Sprague-Grundy</li>
+<li>Symmetry</li>
+<li>Code something that calculates for small cases and find a pattern</li>
 </ul>
 
 

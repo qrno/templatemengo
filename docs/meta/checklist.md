@@ -1,16 +1,21 @@
 # Checklist
 
+## Is this <topic>?
+
+- Binary Search on the answer
+- Meet in the Middle
+- Super greedy (make a wild guess)
+
 ## Thinking about solution
 
 - Immediately play with the sample cases, you may have understood the problem wrong
-- Pay close attention to the constraints
-- _Always_ consider doing Binary Search on the answer
+- Think about constraints
 
 ## Before Submitting
 
 - Even if the test cases pass, make sure your code is at least doing _something_
-- If the test cases are _too_ simple, come up with a couple extra ones
-- Check if constants are big enough
+- If the test cases are _too_ simple, come up with an extra one
+- Check constants are big enough
 - Check time and memory limits
 - Submit the right file
 
@@ -23,8 +28,8 @@
 
 ## STL
 
-- Don't call .back(), .front(), .top() on empty containers
-- Don't change a container as you iterate through it (Even accessing a map may change it)
+- Check for empty when calling .back(), .front(), .top() on containers
+- Don't change a container as you iterate through it (accessing a map may change it)
 - Always make sure your iterators are valid
 
 ## Graphs
@@ -32,7 +37,7 @@
 - Add edges both ways if the graph is bidirectional
 - On problems where you remove stuff, just do it backwards.
 
-## Beecrowd/UVa 🤮
+## Beecrowd/UVa
 
 - Don't put space at the end of output
 - Check if there are multiple testcases
@@ -42,3 +47,9 @@
 - Try to invert the order of the states - sometimes the problem becomes much easier
 - Can you use D&C DP?
 - Can you use Convex Hull Trick?
+
+## Games
+
+- Sprague-Grundy
+- Symmetry
+- Code something that calculates for small cases and find a pattern

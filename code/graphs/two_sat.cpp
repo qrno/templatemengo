@@ -10,21 +10,22 @@ struct TwoSat {
     G[neg(u)].push_back(v);
   }
   void add_diff(int v, int u) {
-    G[v].push_back(neg(u));
-    G[neg(v)].push_back(u);
-    G[u].push_back(neg(v));
-    G[neg(u)].push_back(v);
+    add_or(v, u);
+    add_or(neg(v), neg(u));
   }
   void add_impl(int v, int u) {
-    G[v].push_back(u);
-    G[neg(u)].push_back(neg(v));
+    add_or(neg(v), u);
   }
   void add_same(int v, int u) {
-    G[v].push_back(u);
-    G[neg(v)].push_back(neg(u));
-    G[u].push_back(v);
-    G[neg(u)].push_back(neg(v));
+    add_impl(v, u);
+    add_impl(neg(v), neg(u));
   }
+  void add_true(int v) {
+    add_or(v, v);
+  }
+  void add_false(int v) {
+    add_or(neg(v), neg(v));
+  };
 
   // Assumes Kosaraju returns components in topological ordering v -> u implies scc[v] <= scc[u]
   pair<bool, vector<bool>> solve() {
@@ -38,3 +39,4 @@ struct TwoSat {
   }
 };
 //}}}
+

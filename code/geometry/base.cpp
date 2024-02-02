@@ -69,6 +69,9 @@ T sarea(Point<T> const& a, Point<T> const& b, Point<T> const& c) {
   return ((b-a)^(c-b))/2;
 }
 
+// left = +1
+// collinear = 0
+// right = -1
 template<typename T>
 int side(Point<T> const& p, Point<T> const& a, Point<T> const& b) {
   T x = (b-a) ^ (p-a);
