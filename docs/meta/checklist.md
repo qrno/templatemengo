@@ -31,6 +31,7 @@
 - Check for empty when calling .back(), .front(), .top() on containers
 - Don't change a container as you iterate through it (accessing a map may change it)
 - Always make sure your iterators are valid
+- When using multiset, don't use erase when you want to erase one!!!
 
 ## Graphs
 

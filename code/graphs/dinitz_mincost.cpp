@@ -12,27 +12,27 @@ struct Dinitz {
     adj.resize(n);
   }
 
-  V<Edge> edges;
-  V<V<int>> adj;
+  vector<Edge> edges;
+  vector<vector<int>> adj;
   void add_edge(int v, int u, int cap, int cost) {
     edges.emplace_back(v, u, cap, cost);
-    adj[v].pb(sz(edges)-1);
+    adj[v].push_back(size(edges)-1);
     edges.emplace_back(u, v, 0, -cost);
-    adj[u].pb(sz(edges)-1);
+    adj[u].push_back(size(edges)-1);
   }
 
-  V<int> dist;
+  vector<int> dist;
   bool spfa() {
     dist.assign(n, INF);
 
     queue<int> Q;
-    V<bool> inqueue(n, false);
+    vector<bool> inqueue(n, false);
 
     dist[s] = 0;
     Q.push(s);
     inqueue[s] = true;
 
-    V<int> cnt(n);
+    vector<int> cnt(n);
 
     while (!Q.empty()) {
       int v = Q.front(); Q.pop();
@@ -55,10 +55,10 @@ struct Dinitz {
   }
 
   int cost = 0;
-  V<int> ptr;
+  vector<int> ptr;
   int dfs(int v, int f) {
     if (v == t || f == 0) return f;
-    for (auto &cid = ptr[v]; cid < sz(adj[v]);) {
+    for (auto &cid = ptr[v]; cid < size(adj[v]);) {
       auto eid = adj[v][cid];
       auto &e = edges[eid];
       cid++;

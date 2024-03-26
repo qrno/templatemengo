@@ -5,7 +5,7 @@ class SegmentTree {
   vector<T> data;
 public:
   explicit SegmentTree(int N) : N(N), data(2*N) {}
-  explicit SegmentTree(vector<int> const& A) : N(size(A)) {
+  explicit SegmentTree(vector<T> const& A) : N(size(A)) {
     for (int i = 0; i < N; i++) set(i, A[i]);
   }
 
