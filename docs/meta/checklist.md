@@ -49,6 +49,10 @@
 - Can you use D&C DP?
 - Can you use Convex Hull Trick?
 
+## Small to Large
+
+- Check if the `S[small] > S[big]` is not inverted
+
 ## Games
 
 - Sprague-Grundy

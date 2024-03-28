@@ -46,7 +46,7 @@ struct HopcroftKarp {
         }
       }
     }
-    lvl[l] = NONE;
+    lvl[l] = INF;
     return false;
   }
 

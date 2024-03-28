@@ -38,11 +38,6 @@ vector<int> sort_cyclic_shifts(string const& s) {
   return p;
 }
 
-vector<int> suffix_array(string s) {
-  s += '$';
-  return sort_cyclic_shifts(s);
-}
-
 vector<int> kasai(string const& s, vector<int> const& p) {
   int N = size(s);
   vector<int> rank(N);
