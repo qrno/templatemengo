@@ -1,6 +1,6 @@
 // Hopcroft-Karp {{{
 struct HopcroftKarp {
-  const int NONE;
+  const int NONE_R;
   const int INF = 1e9 + 8;
 
   int L, R;
@@ -12,18 +12,18 @@ struct HopcroftKarp {
   bool bfs() {
     queue<int> Q;
     for (int l = 0; l < size(ml); l++) {
-      if (ml[l] == NONE) {
+      if (ml[l] == -1) {
         lvl[l] = 0;
         Q.push(l);
       } else {
         lvl[l] = INF;
       }
     }
-    lvl[NONE] = INF;
+    lvl[NONE_R] = INF;
     while (!empty(Q)) {
       int l = Q.front();
       Q.pop();
-      if (lvl[l] < lvl[NONE]) {
+      if (lvl[l] < lvl[NONE_R]) {
         for (auto r : G[l]) {
           if (lvl[mr[r]] == INF) {
             lvl[mr[r]] = lvl[l] + 1;
@@ -32,11 +32,11 @@ struct HopcroftKarp {
         }
       }
     }
-    return lvl[NONE] != INF;
+    return lvl[NONE_R] != INF;
   }
 
   bool dfs(int l) {
-    if (l == NONE) return true;
+    if (l == NONE_R) return true;
     for (auto r : G[l]) {
       if (lvl[mr[r]] == lvl[l] + 1) {
         if (dfs(mr[r])) {
@@ -50,14 +50,14 @@ struct HopcroftKarp {
     return false;
   }
 
-  HopcroftKarp(int L, int R, vector<vector<int>> const& G) : L(L), R(R), NONE(L), G(G) {
-    ml.assign(L, NONE);
-    mr.assign(R, NONE);
+  HopcroftKarp(int _L, int _R, vector<vector<int>> const& G) : L(_L), R(_R), NONE_R(_L), G(G) {
+    ml.assign(L, -1);
+    mr.assign(R, NONE_R);
     lvl.assign(L+1, -1);
 
     while (bfs()) {
       for (int l = 0; l < L; l++) {
-        if (ml[l] == NONE) {
+        if (ml[l] == -1) {
           if (dfs(l)) ans++;
         }
       }
