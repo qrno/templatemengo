@@ -12,6 +12,7 @@ class HashedString {
 
   public:
   explicit HashedString(string const& s) {
+    N = size(s);
     while (size(pow) < size(s) + 1) pow.push_back(mod_mul(pow.back(), B));
 
     p_hash.resize(size(s) + 1);
@@ -28,9 +29,14 @@ class HashedString {
   int prefix(int len) { return get_hash(0, len-1); }
   int suffix(int len) { return get_hash(N-len, N-1); }
   int whole() { return get_hash(0, N-1); }
-  int substr(int l, int len) {
+  int from(int l, int len) {
     int r = l+len-1;
     r = min(r, N-1);
+    return get_hash(l, r);
+  }
+  int to(int r, int len) {
+    int l = r-len+1;
+    l = max(l, 0LL);
     return get_hash(l, r);
   }
 };

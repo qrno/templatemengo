@@ -53,6 +53,12 @@
 
 - Check if the `S[small] > S[big]` is not inverted
 
+## SQRT
+
+- It's hard to debug problems with SQRT "blocking".
+If the block size is too big the mistakes won't show in the samples.
+Change to a small block to check.
+
 ## Games
 
 - Sprague-Grundy
