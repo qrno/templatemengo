@@ -33,7 +33,7 @@ public:
   }
 
   void add(int p, T const& val) {
-    set(p, get(p)+val);
+    set(p, merge(get(p),val));
   }
 
   T sum(int l, int r) const {

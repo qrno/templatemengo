@@ -1,20 +1,24 @@
 // Matrix Exponentiation {{{
 struct Matrix {
   int N;
-  V<V<mint>> M;
-  Matrix (int N) : N(N), M(N, V<mint>(N)) {}
+  vector<vector<mint>> M;
+  Matrix (int N) : N(N), M(N, vector<mint>(N)) {}
   Matrix operator*(Matrix const& rhs) {
     Matrix result(N);
-    loop (i, N) loop (j, N) loop (k, N) {
-      result.M[i][j] += M[i][k] * rhs.M[k][j];
+    for (int i = 0; i < N; i++) {
+      for (int j = 0; j < N; j++) {
+        for (int k = 0; k < N; k++) {
+          result.M[i][j] += M[i][k] * rhs.M[k][j];
+        }
+      }
     }
     return result;
   }
 };
 
-Matrix ident(int n) {
-  Matrix M(n);
-  loop (i, n) M.M[i][i] = 1;
+Matrix ident(int N) {
+  Matrix M(N);
+  for (int i = 0; i < N; i++) M.M[i][i] = 1;
   return M;
 }
 

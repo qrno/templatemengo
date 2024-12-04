@@ -1,3 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define int long long
+
+signed main() {
+  ios::sync_with_stdio(false); cin.tie(nullptr);
+
+}
+
 // Lazy Segment Tree (Arithmetic Progression) {{{
 using ii = pair<int, int>;
 ii operator+(ii a, ii b) { return {a.first + b.first, a.second + b.second}; }

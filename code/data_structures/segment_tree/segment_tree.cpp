@@ -1,11 +1,11 @@
 //{{{ Segment Tree
 template<typename T>
 class SegmentTree {
-  int N;
+  const int N;
   vector<T> data;
 public:
   explicit SegmentTree(int N) : N(N), data(2*N) {}
-  explicit SegmentTree(vector<T> const& A) : N(size(A)) {
+  explicit SegmentTree(vector<T> const& A) : N(size(A)), data(2*size(A)) {
     for (int i = 0; i < N; i++) set(i, A[i]);
   }
 

@@ -14,7 +14,7 @@ int psum(vector<vector<int>> const& A, int i1, int j1, int i2, int j2) {
   int sum = A[i2][j2];
   if (i1) sum -= A[i1-1][j2];
   if (j1) sum -= A[i2][j1-1];
-  if (i1 && j1) sum -= A[i1-1][j1-1];
+  if (i1 && j1) sum += A[i1-1][j1-1];
   return sum;
 }
 // }}}
