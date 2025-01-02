@@ -1,3 +1,26 @@
+# Treap
+
+## Implementation
+
+```cpp title="Treap"
+--8<-- "data_structures/treap.cpp"
+```
+
+- [Benq's Presentation](https://docs.google.com/presentation/d/14xgtdDWnIBwmJRAuIdZ8FvLZcX9uRxnNoGOGAQRDIvc/)
+- [Algorithms Live! - Episode 30 - Treaps](https://www.youtube.com/watch?v=erKlLEXLKyY)
+- [AlgorithmsThread 9: Treaps!](https://www.youtube.com/watch?v=6x0UlIBLRsc)
+
+## Notes
+
+- Binary Search Tree
+
+- Talk about implicit treap from the very start?
+
+- I'll probably want to solve at least:
+ - [Cut and Paste](https://cses.fi/problemset/task/2072)
+ - [Substring Reversals](https://cses.fi/problemset/task/2073)
+ - [Reversals and Sums](https://cses.fi/problemset/task/2074)
+
 // Treap {{{
 struct Node {
   int X, P, S;

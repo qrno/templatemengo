@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../rttr/">
+        <link rel="prev" href="../segment_tree/">
       
       
-        <link rel="next" href="../winter/">
+        <link rel="next" href="../../geometry/base/">
       
       
       <link rel="icon" href="../../assets/flamengo.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Virtual Every Day June - Templatemengo</title>
+        <title>Treap - Templatemengo</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#virtual-every-day-june" class="md-skip">
+        <a href="#treap" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Virtual Every Day June
+              Treap
             
           </span>
         </div>
@@ -340,17 +340,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -364,7 +366,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Data structures
@@ -378,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_structures/dsu/" class="md-nav__link">
+      <a href="../dsu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_structures/fenwick_tree/" class="md-nav__link">
+      <a href="../fenwick_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_structures/inversions/" class="md-nav__link">
+      <a href="../inversions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_structures/min_window/" class="md-nav__link">
+      <a href="../min_window/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -462,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_structures/seg_p1/" class="md-nav__link">
+      <a href="../seg_p1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -483,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../data_structures/segment_tree/" class="md-nav__link">
+      <a href="../segment_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,10 +503,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../data_structures/treap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Treap
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -513,6 +535,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1012,19 +1072,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1038,7 +1096,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Meta
@@ -1052,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../checklist/" class="md-nav__link">
+      <a href="../../meta/checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commands/" class="md-nav__link">
+      <a href="../../meta/commands/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../gyms/" class="md-nav__link">
+      <a href="../../meta/gyms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rttr/" class="md-nav__link">
+      <a href="../../meta/rttr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1133,30 +1191,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Virtual Every Day June
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../meta/vedj/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,146 +1203,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#day-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 1
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 4
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 5
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 5">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1317,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../winter/" class="md-nav__link">
+      <a href="../../meta/winter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1373,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blog/purr/" class="md-nav__link">
+      <a href="../../meta/blog/purr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1437,7 +1335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../editorial/unbdesc2023/" class="md-nav__link">
+      <a href="../../meta/editorial/unbdesc2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1501,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tepc/segs/" class="md-nav__link">
+      <a href="../../meta/tepc/segs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1704,122 +1602,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#day-1" class="md-nav__link">
+  <a href="#implementation" class="md-nav__link">
     <span class="md-ellipsis">
-      Day 1
+      Implementation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Day 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#day-2" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Day 2
+      Notes
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Day 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 4
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#day-5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Day 5
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Day 5">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#upsolving-quirino_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Upsolving Quirino
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1838,58 +1634,137 @@
                   
 
 
-<h1 id="virtual-every-day-june">Virtual Every Day June</h1>
-<p>Rating changes calculated using <a href="https://cfviz.netlify.app/virtual-rating-change.html">Codeforces Visualizer</a>.</p>
-<p>It is kinda silly to calculate Div. 2 rating changes for ratings over 2100, but I don't care.</p>
-<h2 id="day-1">Day 1</h2>
-<p><a href="https://codeforces.com/contest/1721">Educational Codeforces Round 134</a></p>
+<h1 id="treap">Treap</h1>
+<h2 id="implementation">Implementation</h2>
+<div class="highlight"><span class="filename">Treap</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Treap {{{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Node</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="w"> </span><span class="n">P</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">R</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">Node</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">X</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">P</span><span class="p">(</span><span class="n">rng</span><span class="p">()),</span><span class="w"> </span><span class="n">S</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">L</span><span class="p">(</span><span class="k">nullptr</span><span class="p">),</span><span class="w"> </span><span class="n">R</span><span class="p">(</span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">};</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="kt">int</span><span class="w"> </span><span class="nf">size</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">S</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">pair</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="k">nullptr</span><span class="p">,</span><span class="w"> </span><span class="k">nullptr</span><span class="p">};</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">cnt</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">cnt</span><span class="o">-</span><span class="n">size</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">)</span><span class="mi">-1</span><span class="p">);</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">);</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">};</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">cnt</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="n">t</span><span class="o">-&gt;</span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">t</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">};</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="n">tuple</span><span class="o">&lt;</span><span class="n">Node</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">*&gt;</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="p">);</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="p">[</span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="o">-</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">M</span><span class="p">,</span><span class="w"> </span><span class="n">R</span><span class="p">};</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">meld</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">P</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">r</span><span class="o">-&gt;</span><span class="n">P</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">R</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meld</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="n">l</span><span class="o">-&gt;</span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">l</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">);</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">    </span><span class="n">r</span><span class="o">-&gt;</span><span class="n">L</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">meld</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">);</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="n">r</span><span class="o">-&gt;</span><span class="n">S</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">r</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">r</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">);</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="p">}</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">meld</span><span class="p">(</span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="w"> </span><span class="o">*</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">meld</span><span class="p">(</span><span class="n">meld</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">),</span><span class="w"> </span><span class="n">r</span><span class="p">);</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="p">}</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">os</span><span class="p">,</span><span class="w"> </span><span class="n">Node</span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">  </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">-&gt;</span><span class="n">L</span><span class="p">;</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">  </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">-&gt;</span><span class="n">X</span><span class="p">;</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">  </span><span class="n">os</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="o">-&gt;</span><span class="n">R</span><span class="p">;</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">os</span><span class="p">;</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="p">}</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="c1">//}}}</span>
+</code></pre></div>
 <ul>
-<li>cebolinha: <span class="arithmatex">\(2176 - 88 = 2088\)</span></li>
-<li>EYZ: <span class="arithmatex">\(1595 - 60 = 1535\)</span></li>
+<li><a href="https://docs.google.com/presentation/d/14xgtdDWnIBwmJRAuIdZ8FvLZcX9uRxnNoGOGAQRDIvc/">Benq's Presentation</a></li>
+<li><a href="https://www.youtube.com/watch?v=erKlLEXLKyY">Algorithms Live! - Episode 30 - Treaps</a></li>
+<li><a href="https://www.youtube.com/watch?v=6x0UlIBLRsc">AlgorithmsThread 9: Treaps!</a></li>
 </ul>
-<h3 id="upsolving-quirino">Upsolving Quirino</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> E - Prefix Function Queries</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> F - Matching Reduction</li>
-</ul>
-<h2 id="day-2">Day 2</h2>
-<p><a href="https://codeforces.com/contest/1430">Educational Codeforces Round 96</a></p>
+<h2 id="notes">Notes</h2>
 <ul>
-<li>cebolinha: <span class="arithmatex">\(2088 + 121 = 2209\)</span></li>
-<li>EYZ: <span class="arithmatex">\(1535 + 20 = 1555\)</span></li>
+<li>
+<p>Binary Search Tree</p>
+</li>
+<li>
+<p>Talk about implicit treap from the very start?</p>
+</li>
+<li>
+<p>I'll probably want to solve at least:</p>
+</li>
+<li><a href="https://cses.fi/problemset/task/2072">Cut and Paste</a></li>
+<li><a href="https://cses.fi/problemset/task/2073">Substring Reversals</a></li>
+<li><a href="https://cses.fi/problemset/task/2074">Reversals and Sums</a></li>
 </ul>
-<h3 id="upsolving-quirino_1">Upsolving Quirino</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> G - Yet Another DAG Problem</li>
-</ul>
-<h2 id="day-3">Day 3</h2>
-<p>No virtual required since there was AtCoder, Codeforces and <a href="https://codeforces.com/group/YgJmumGtHD/contest/446227">Mineira Marathon</a>.</p>
-<h3 id="upsolving-quirino_2">Upsolving Quirino</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> L - Bacon e a Árvore Mágica</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> N - Trapaça na Pastelaria</li>
-</ul>
-<h2 id="day-4">Day 4</h2>
-<p><a href="https://codeforces.com/contest/1796">Educational Codeforces Round 144</a></p>
-<ul>
-<li>cebolinha: <span class="arithmatex">\(2209 + 37 = 2246\)</span></li>
-<li>EYZ: <span class="arithmatex">\(1555 - 58 = 1497\)</span></li>
-</ul>
-<h3 id="upsolving-quirino_3">Upsolving Quirino</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> E - Colored Subgraphs</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> F - Strange Triples</li>
-</ul>
-<h2 id="day-5">Day 5</h2>
-<p><a href="https://codeforces.com/contest/1832">Educational Codeforces Round 148</a></p>
-<ul>
-<li>cebolinha: <span class="arithmatex">\(2246 + 87 = 2333\)</span></li>
-<li>EYZ: <span class="arithmatex">\(1497 - 19 = 1478\)</span></li>
-</ul>
-<h3 id="upsolving-quirino_4">Upsolving Quirino</h3>
-<ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> F - Zombies</li>
-</ul>
+<p>// Treap {{{
+struct Node {
+  int X, P, S;
+  Node <em>L, </em>R;
+  Node (int x) : X(x), P(rng()), S(1), L(nullptr), R(nullptr) {}
+};</p>
+<p>int size(Node* t) { return t ? t-&gt;S : 0; }</p>
+<p>pair<Node*, Node*> split(Node *t, int cnt) {
+  if (!t) return {nullptr, nullptr};</p>
+<p>if (size(t-&gt;L) &lt; cnt) {
+    auto [l, r] = split(t-&gt;R, cnt-size(t-&gt;L)-1);
+    t-&gt;R = l;
+    t-&gt;S = 1 + size(t-&gt;L) + size(t-&gt;R);
+    return {t, r};
+  } else {
+    auto [l, r] = split(t-&gt;L, cnt);
+    t-&gt;L = r;
+    t-&gt;S = 1 + size(t-&gt;L) + size(t-&gt;R);
+    return {l, t};
+  }
+}</p>
+<p>tuple<Node*, Node*, Node*> split(Node* t, int l, int r) {
+  auto [L, x] = split(t, l);
+  auto [M, R] = split(x, r-l+1);
+  return {L, M, R};
+}</p>
+<p>Node<em> meld(Node </em>l, Node *r) {
+  if (!l) return r;
+  if (!r) return l;</p>
+<p>if (l-&gt;P &gt; r-&gt;P) {
+    l-&gt;R = meld(l-&gt;R, r);
+    l-&gt;S = 1 + size(l-&gt;L) + size(l-&gt;R);
+    return l;
+  } else {
+    r-&gt;L = meld(l, r-&gt;L);
+    r-&gt;S = 1 + size(r-&gt;L) + size(r-&gt;R);
+    return r;
+  }
+}</p>
+<p>Node<em> meld(Node </em>l, Node <em>m, Node </em>r) {
+  return meld(meld(l, m), r);
+}</p>
+<p>ostream &amp;operator&lt;&lt;(ostream &amp;os, Node* x) {
+  if (!x) return os;
+  os &lt;&lt; x-&gt;L;
+  os &lt;&lt; x-&gt;X;
+  os &lt;&lt; x-&gt;R;
+  return os;
+}
+//}}}</p>
 
 
 
