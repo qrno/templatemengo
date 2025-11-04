@@ -14,3 +14,6 @@ for ((i=1; ; i++)) do
   $p2 < i.txt > o2.txt
   diff -q o1.txt o2.txt
 done
+
+# Prints first 10 lines of each file as well as the diff
+#   head -n 10 i.txt o1.txt o2.txt && diff o1.txt o2.txt
